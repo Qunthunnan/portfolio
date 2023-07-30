@@ -1,0 +1,23 @@
+.promo {
+    padding: 207px 0px 0px 0px;
+    min-height: 100vh;
+    background: url('../img/promo-bg3.jpg') center center/cover no-repeat;
+    &__buttons-wrapper {
+        display: flex;
+        margin-top: 30px;
+        width: 270px;
+        justify-content: space-between;
+        align-content: center;
+        a {
+            display: block;
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 44px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

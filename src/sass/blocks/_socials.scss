@@ -1,0 +1,26 @@
+.socials {
+    position: fixed;
+    top: 266px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 340px;
+
+    &__text {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__divider {
+        width: 70px;
+        height: 2px;
+        background-color: #FFF;
+    }
+}
+
+.test {
+    height: 1999px;
+    background-color: black;
+}
