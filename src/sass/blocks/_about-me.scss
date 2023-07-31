@@ -1,0 +1,56 @@
+.about-me {
+    padding: 66px 0px 35px 0px;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__my-photo {
+        margin-right: 50px;
+        border-radius: 20px;
+        display: block;
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__skills {
+        margin-top: 40px;
+    }
+
+    &__skill {
+        width: 260px;
+        display: flex;
+    }
+
+    &__skill-img-wrapper {
+        width: 40px;
+        height: 40px;
+        margin-right: 25px;
+        position: relative;
+        &::before {
+            content: '';
+            height: 36px;
+            width: 36px;
+            background-color: $main-color;
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            border-radius: 100%;
+            z-index: -1;
+        }
+    }
+
+    &__skill-title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__skill-descr {
+        font-size: 12px;
+        font-weight: 500;
+    }
+}

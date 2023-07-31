@@ -1,0 +1,13 @@
+@mixin inset-circle {
+    &::before {
+        content: '';
+        height: 36px;
+        width: 36px;
+        background-color: $main-color;
+        position: absolute;
+        top: -7px;
+        left: -10px;
+        border-radius: 100%;
+        z-index: -1;
+    }
+}

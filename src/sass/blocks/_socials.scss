@@ -1,11 +1,13 @@
 .socials {
     position: fixed;
-    top: 266px;
-    left: 60px;
+    top: 50%;
+    left: -119px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 340px;
+    transform: rotate(-90deg) translateY(-50%);
+    z-index: 1;
 
     &__text {
         color: #FFF;
@@ -18,9 +20,13 @@
         height: 2px;
         background-color: #FFF;
     }
+
+    &_menu-active {
+        display: none;
+    }
 }
 
 .test {
     height: 1999px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
