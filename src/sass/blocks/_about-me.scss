@@ -2,13 +2,23 @@
     padding: 66px 0px 35px 0px;
 
     &__wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 2fr;
+        gap: 50px;
+        grid-template-areas: 
+        "myphoto content"
+        "myphoto skills";
     }
 
     &__my-photo {
-        margin-right: 50px;
         border-radius: 20px;
         display: block;
+        grid-area: myphoto;
+    }
+
+    &__content {
+        grid-area: content;
     }
 
     &__text {
@@ -18,7 +28,12 @@
     }
 
     &__skills {
-        margin-top: 40px;
+        grid-area: skills;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 260px);
+        grid-template-rows: auto auto;
+        // grid-auto-columns: 300px;
+        // grid-auto-rows: 130px;
     }
 
     &__skill {

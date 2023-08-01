@@ -24,6 +24,42 @@
     &_menu-active {
         display: none;
     }
+
+    &_black {
+        .socials__text {
+            color: black;
+        }
+
+        .socials__divider {
+            background-color: black;
+        }
+
+        a {
+            svg {
+                path{
+                    fill: black;
+                }
+            }
+        }
+    }
+
+    &_white {
+        .socials__text {
+            color: white;
+        }
+
+        .socials__divider {
+            background-color: white;
+        }
+
+        a {
+            svg {
+                path{
+                    fill: white;
+                }
+            }
+        }
+    }
 }
 
 .test {
