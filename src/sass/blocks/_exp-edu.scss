@@ -1,0 +1,86 @@
+.exp-edu {
+    padding: 35px 0px 40px 0px; 
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 60px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 700;
+        position: relative;
+        @include inset-circle;
+        &::before {
+            height: 15px;
+            width: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -49px;
+        }
+    }
+
+    &__education, &__experience {
+        padding-left: 86px;
+    }
+
+    &__info-block {
+        margin-top: 45px;
+        width: 375px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: calc(100% + 53px);
+            width: 1px;
+            left: -42px;
+            top: -53px;
+            background-color: black;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        img {
+            position: absolute;
+            top: 15px;
+            left: 14px;
+        }
+        @include inset-circle;
+        &::before {
+            top: 2px;
+            left: -3px;
+        }
+    }
+
+    &__info-title {
+        font-size: 14px;
+        font-weight: 700;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: -41px;
+            height: 1px;
+            width: 38px;
+            background-color: black;
+        }
+    }
+
+    &__info-subtitle, &__info-title {
+        padding-left: 56px;
+    }
+
+    &__info-subtitle, &__info-text {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    &__info-text {
+        margin-top: 10px;
+    }
+
+}

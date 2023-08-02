@@ -45,9 +45,28 @@
             width: 215px;
         }
     }
+
+    .exp-edu {
+        &__education {
+            padding-left: 43px;
+        }
+        
+        &__experience {
+            padding-left: 86px;
+        }
+
+        &__info-block {
+            width: 255px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
+
+    .title {
+        font-size: 26px;
+    }
+
     .promo {
         &__menu-block {
             width: 45vw;
@@ -61,6 +80,28 @@
             a {
                 margin: 0px 10px;
             }
+        }
+    }
+
+    .about-me {
+        &__wrapper {
+            grid-template-areas: 
+            "myphoto content"
+            "skills skills";
+        }
+    }
+
+    .exp-edu {
+        &__education {
+            padding-left: 43px;
+        }
+        
+        &__experience {
+            padding-left: 56px;
+        }
+
+        &__info-block {
+            width: 200px;
         }
     }
 }
@@ -104,6 +145,7 @@
 
     .title {
         font-size: 29px;
+        line-height: 36px;
         text-align: center;
         position: relative;
         &::after{
@@ -121,6 +163,17 @@
                 left: 32px;
             }
         }
+
+        &_about-me {
+            text-align: left;
+            &::after{
+                left: 32px;
+            }
+        }
+
+        &_exp-edu, &_about-me {
+            margin-top: 25px;
+        }
     }
 
     .uptitle {
@@ -129,11 +182,19 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
         &_promo {
             text-align: left;
             &::before {
                 top: -7px;
                 left: 5px;
+            }
+        }
+
+        &_about-me {
+            text-align: left;
+            &::before {
+                left: 15px;
             }
         }
     }
@@ -164,6 +225,22 @@
 
         &__skill-img-wrapper {
             margin-right: 10px;
+        }
+    }
+
+    .exp-edu {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            margin-top: 30px;
+            row-gap: 30px;
+        }
+
+        &__info-block {
+            width: 259px;
+        }
+
+        &__experience {
+            padding-left: 43px;
         }
     }
 }
