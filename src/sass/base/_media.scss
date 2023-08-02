@@ -30,7 +30,7 @@
 
     .about-me {
         &__wrapper {
-            gap: 30px;
+            gap: 40px;
         }
 
         &__my-photo {
@@ -39,7 +39,8 @@
         }
 
         &__skills {
-            grid-template-columns: repeat(auto-fit,215px);
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
         &__skill {
             width: 215px;
@@ -88,6 +89,13 @@
             grid-template-areas: 
             "myphoto content"
             "skills skills";
+            grid-template-rows: minmax(337px, auto) minmax(270px, auto);
+            gap: 30px;
+        }
+
+        &__skills {
+            padding-left: 16px;
+            grid-template-rows: repeat(2,minmax(125px,auto));
         }
     }
 
@@ -221,6 +229,11 @@
             grid-template-rows: auto;
             row-gap: 40px;
             grid-auto-rows: auto;
+            padding-left: none;
+        }
+
+        &__skill {
+            width: 300px;
         }
 
         &__skill-img-wrapper {

@@ -3,18 +3,22 @@
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 2fr;
-        gap: 50px;
+        grid-template-columns: 422px minmax(590px);
+        grid-template-rows: 245px minmax(150px, auto);
+        column-gap: 50px;
+        row-gap: 30px;
         grid-template-areas: 
         "myphoto content"
         "myphoto skills";
     }
 
     &__my-photo {
-        border-radius: 20px;
-        display: block;
         grid-area: myphoto;
+        img {
+            border-radius: 20px;
+            display: block;
+            width: 100%;
+        }
     }
 
     &__content {
