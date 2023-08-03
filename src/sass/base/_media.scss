@@ -15,6 +15,23 @@
             width: 360px;
         }
     }
+
+    .tools {
+        &__wrapper {
+            grid-template:  repeat(2, minmax(270px, auto)) / repeat(3, minmax(270px, 320px));
+        }
+    }
+
+    .skills {
+        &__wrapper {
+            grid-template: repeat(2, 70px) / repeat(3, 280px);
+            grid-auto-columns: 280px;
+        }
+
+        &__progress-bar {
+            width: 280px;
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -60,6 +77,23 @@
             width: 255px;
         }
     }
+
+    .tools {
+        &__wrapper {
+            grid-template:  repeat(2, minmax(200px, auto)) / repeat(3, minmax(200px, 220px));
+        }
+    }
+
+    .skills {
+        &__wrapper {
+            grid-template: repeat(2, 70px) / repeat(3, 220px);
+            grid-auto-columns: 220px;
+        }
+
+        &__progress-bar {
+            width: 220px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -100,6 +134,9 @@
     }
 
     .exp-edu {
+        &__wrapper {
+            margin-top: 40px;
+        }
         &__education {
             padding-left: 43px;
         }
@@ -110,6 +147,24 @@
 
         &__info-block {
             width: 200px;
+        }
+    }
+
+    .tools {
+        &__wrapper {
+            grid-template:  repeat(2, minmax(200px, auto)) / repeat(2, minmax(250px, 320px));
+            margin-top: 40px;
+        }
+    }
+
+    .skills {
+        &__wrapper {
+            grid-template: repeat(2, 70px) / repeat(2, 240px);
+            grid-auto-columns: 240px;
+        }
+
+        &__progress-bar {
+            width: 240px;
         }
     }
 }
@@ -199,7 +254,7 @@
             }
         }
 
-        &_about-me {
+        &_about-me, &_skills {
             text-align: left;
             &::before {
                 left: 15px;
@@ -229,10 +284,11 @@
             grid-template-rows: auto;
             row-gap: 40px;
             grid-auto-rows: auto;
-            padding-left: none;
+            padding-left: 0px;
         }
 
         &__skill {
+            padding-left: 12px;
             width: 300px;
         }
 
@@ -254,6 +310,27 @@
 
         &__experience {
             padding-left: 43px;
+        }
+    }
+
+    .tools {
+        &__wrapper {
+            grid-template:  repeat(2, minmax(200px, auto)) / repeat(1, minmax(250px, 320px));
+            margin-top: 30px;
+        }
+    }
+
+    .skills {
+        padding: 40px 0 40px 0;
+        &__wrapper {
+            grid-template: repeat(2, 70px) / repeat(1, 300px);
+            grid-auto-columns: 300px;
+            row-gap: 50px;
+            justify-content: center;
+        }
+
+        &__progress-bar {
+            width: 300px;
         }
     }
 }

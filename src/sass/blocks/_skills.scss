@@ -1,0 +1,39 @@
+.skills {
+    padding: 80px 0px 60px 0px;
+
+    &__wrapper {
+        display: grid;
+        grid-template: repeat(2, 70px) / repeat(3, 350px);
+        grid-auto-rows: 70px;
+        grid-auto-columns: 350px;
+        justify-content: space-between;
+        row-gap: 30px;
+    }
+
+    &__skill-wrapper {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+
+    &__percentage {
+        justify-self: flex-end;
+    }
+
+    &__progress-bar {
+        width: 350px;
+        height: 14px;
+        background-color: #E8E4DE;
+        border-radius: 4px;
+        align-self: flex-end;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    &__progress {
+        height: 100%;
+        background-color: $main-color;
+        border-radius: 4px;
+    }
+}

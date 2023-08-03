@@ -1,0 +1,41 @@
+.tools {
+    padding: 35px 0px 40px 0px;
+
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template:  repeat(2, minmax(270px, auto)) / repeat(4, minmax(270px, 320px));
+        grid-auto-columns: minmax(270px, 320px);
+        grid-auto-rows: minmax(270px, auto);
+        gap: 13px;
+        justify-content: center;
+    }
+
+    &__tool {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 30px 30px 25px 30px;
+    }
+
+    &__tool-img {
+        height: 65px;
+        display: flex;
+        align-items: center;
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    }
+
+    &__tool-title {
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__text {
+        margin-top: 15px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+}

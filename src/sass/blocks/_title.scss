@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
         background-color: $main-color;
     }
 
-    &_exp-edu {
+    &_exp-edu, &_tools {
         text-align: center;
         &::after {
             position: absolute;
@@ -39,11 +39,19 @@ h1, h2, h3, h4, h5, h6 {
     }
     @include inset-circle;
 
-    &_exp-edu {
+    &_exp-edu, &_tools {
         text-align: center;
         &::before {
             left: 50%;
             transform: translateX(-50%);
+        }
+    }
+
+    &_skills {
+        padding-left: 13px;
+        font-size: 14px;
+        &::before {
+            left: 0px;
         }
     }
 
