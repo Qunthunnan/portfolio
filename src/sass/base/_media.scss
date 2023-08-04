@@ -32,6 +32,13 @@
             width: 280px;
         }
     }
+
+    .portfolio {
+        &__wrapper {
+            grid-template: repeat(2,230px)/repeat(4,230px);
+            grid-auto-rows: 230px;
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -92,6 +99,28 @@
 
         &__progress-bar {
             width: 220px;
+        }
+    }
+
+    .portfolio {
+        &__wrapper {
+            grid-template: repeat(3,230px)/repeat(3,230px);
+        }
+
+        &__item-vertical {
+            grid-row: 1 / 3;
+            grid-column: 3 / 4;
+        }
+    
+        &__item-horizontal {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+        }
+    }
+
+    .price {
+        &__wrapper {
+            grid-template: repeat(3, minmax(44px, auto)) / repeat(2,300px);
         }
     }
 }
@@ -165,6 +194,30 @@
 
         &__progress-bar {
             width: 240px;
+        }
+    }
+
+    .portfolio {
+        &__wrapper {
+            margin-top: 40px;
+            grid-template: repeat(4,230px)/repeat(2,230px);
+        }
+
+        &__item-vertical {
+            grid-row: 2 / 4;
+            grid-column: 2 / 3;
+        }
+    
+        &__item-horizontal {
+            grid-row: 4 / 5;
+            grid-column: 1 / 3;
+        }
+    }
+
+    .price {
+        &__wrapper {
+            margin-top: 60px;
+            grid-template: repeat(3, minmax(44px, auto)) / repeat(2,240px);
         }
     }
 }
@@ -331,6 +384,23 @@
 
         &__progress-bar {
             width: 300px;
+        }
+    }
+
+    .portfolio {
+        padding: 20px 0px 20px 0px;
+        &__wrapper {
+            margin-top: 30px;
+            grid-template: repeat(4, 150px)/repeat(2, 150px);
+        }
+    }
+
+    .price {
+        padding: 20px 0px 20px 0px;
+        &__wrapper {
+            grid-template: repeat(6, minmax(44px, auto)) / repeat(1,300px);
+            row-gap: 20px;
+            justify-content: center;
         }
     }
 }

@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
         background-color: $main-color;
     }
 
-    &_exp-edu, &_tools {
+    &_exp-edu, &_tools, &_portfolio {
         text-align: center;
         &::after {
             position: absolute;
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     @include inset-circle;
 
-    &_exp-edu, &_tools {
+    &_exp-edu, &_tools, &_portfolio, &_price {
         text-align: center;
         &::before {
             left: 50%;
@@ -52,6 +52,20 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 14px;
         &::before {
             left: 0px;
+        }
+    }
+
+    &_price {
+        &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 60px;
+            background-color: $main-color;
+            position: absolute;
+            top: 52px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 
