@@ -39,6 +39,13 @@
             grid-auto-rows: 230px;
         }
     }
+
+    .contacts {
+        &__wrapper {
+            grid-template: minmax(600px,auto)/320px 585px;
+            justify-content: space-between;
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -121,6 +128,26 @@
     .price {
         &__wrapper {
             grid-template: repeat(3, minmax(44px, auto)) / repeat(2,300px);
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            grid-template: minmax(600px,auto)/272px 400px;
+        }
+        &__name-input, &__email-input {
+            input {
+                width: 185px;
+            }
+        }
+        &__email-input {
+            justify-self: end;
+        }
+        &__policy {
+            input {
+                margin-right: 0px;
+                margin-top: 3px;
+            }
         }
     }
 }
@@ -220,6 +247,46 @@
             grid-template: repeat(3, minmax(44px, auto)) / repeat(2,240px);
         }
     }
+
+    .contacts {
+        padding: 40px 0px 65px 0px;
+        &__wrapper {
+            grid-template: minmax(600px,auto)/184px 309px;
+        }
+        &__form {
+            grid-template: 45px 45px 190px 45px / 1fr;
+        }
+        &__name-input, &__email-input {
+            input {
+                width: 230px;
+            }
+        }
+        &__email-input {
+            justify-self: flex-start;
+        }
+        &__message {
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+        }
+        &__policy {
+            grid-row: 4/5;
+            grid-column: 1/1;
+            margin-top: -60px;
+            input {
+                height: 15px;
+                width: 15px;
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .button {
+        &_contacts {
+            grid-row: 5/6;
+            grid-column: 1/1;
+            margin-top: -60px;
+        }
+    }
 }
 
 @media (max-width: 575px) {
@@ -280,15 +347,15 @@
             }
         }
 
-        &_about-me {
+        &_about-me, &_contacts {
             text-align: left;
             &::after{
                 left: 32px;
             }
         }
 
-        &_exp-edu, &_about-me {
-            margin-top: 25px;
+        &_about-me, &_exp-edu, &_tools, &_portfolio, &_contacts {
+            margin-top: 26px;
         }
     }
 
@@ -307,7 +374,7 @@
             }
         }
 
-        &_about-me, &_skills {
+        &_about-me, &_skills, &_contacts {
             text-align: left;
             &::before {
                 left: 15px;
@@ -401,6 +468,41 @@
             grid-template: repeat(6, minmax(44px, auto)) / repeat(1,300px);
             row-gap: 20px;
             justify-content: center;
+        }
+    }
+
+    .contacts {
+        padding: 30px 0px 40x 0px;
+        &__wrapper {
+            grid-template: minmax(600px,auto)/300px;
+            justify-content: center;
+
+            &__descr {
+                margin-top: 35px;
+                &:last-child {
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin-top: 20px;
+                }
+            }
+        }    
+  
+        &__my-photo {
+            display: none;
+        }
+
+        &__input-name, &__input-email {
+            input {
+                width: 100%;
+            }
+        }
+    }
+
+    .button {
+        &_contacts {
+            margin: -45px auto;
+            padding: 0px 20px;
+            width: 157px;
         }
     }
 }

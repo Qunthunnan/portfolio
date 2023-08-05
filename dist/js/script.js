@@ -41,3 +41,4 @@ const percentage = document.querySelectorAll('.skills__percentage'),
 percentage.forEach((item, i) => {
     progressBar[i].style.width = item.innerHTML;
 });
+// scroll 

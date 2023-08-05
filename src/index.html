@@ -86,11 +86,11 @@
             <nav>
                 <ul class="promo__menu-items">
                     <li><a class="promo__menu-item" href="#about-me">Про мене</a></li>
-                    <li><a class="promo__menu-item" href="#">Мій досвід</a></li>
-                    <li><a class="promo__menu-item" href="#">Мої навички</a></li>
-                    <li><a class="promo__menu-item" href="#">Мої роботи</a></li>
+                    <li><a class="promo__menu-item" href="#exp-edu">Мій досвід</a></li>
+                    <li><a class="promo__menu-item" href="#skills">Мої навички</a></li>
+                    <li><a class="promo__menu-item" href="#portfolio">Мої роботи</a></li>
                     <!-- <li><a href="#">Прайс</a></li> -->
-                    <li><a class="promo__menu-item" href="#">Контакти</a></li>
+                    <li><a class="promo__menu-item" href="#contacts">Контакти</a></li>
                 </ul>
             </nav>
 
@@ -163,7 +163,7 @@
         </div>
     </section>
 
-    <section class="exp-edu">
+    <section id="exp-edu" class="exp-edu">
         <div class="container">
             <h2 class="uptitle uptitle_exp-edu">Досвід</h2>
             <h2 class="title title_exp-edu">Мій загальний досвід та освіта</h2>
@@ -209,7 +209,7 @@
         </div>
     </section>
 
-    <section class="tools">
+    <section id="tools" class="tools">
         <div class="container">
             <h3 class="uptitle uptitle_tools">Навички</h3>
             <h2 class="title title_tools">Що я використовую у роботі</h2>
@@ -274,7 +274,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
         <div class="container">
             <div class="skills__wrapper">
 
@@ -341,7 +341,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="container">
             <h3 class="uptitle uptitle_portfolio">Портфоліо</h3>
             <h2 class="title title_portfolio">Мої роботи</h2>
@@ -357,7 +357,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section id="price" class="price">
         <div class="container">
             <h3 class="uptitle uptitle_price">Прайс-ліст</h3>
             <div class="price__wrapper">
@@ -395,6 +395,64 @@
                     <div class="price__descr">testTestTesttestTestTest</div>
                 </div>
         
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <div class="contacts__wrapper">
+                <div class="contacts__my-photo">
+                    <img src="img/my-photo.jpg" alt="my-photo">
+                </div>
+
+                <div class="contacts__content">
+                    <h3 class="uptitle uptitle_contacts">Контакти</h3>
+
+                    <h2 class="title title_contacts">Зв'яжіться зі мною</h2>
+
+                    <div class="contacts__descr">Будь яким зручним для вас способом</div>
+
+                    <div class="contacts__socials">
+                        <a href="https://www.facebook.com/kirylo.bashkan">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.0703 0H2.92969C1.31439 0 0 1.31439 0 2.92969V17.0703C0 18.6856 1.31439 20 2.92969 20H8.82812V12.9297H6.48438V9.41406H8.82812V7.03125C8.82812 5.09262 10.4051 3.51562 12.3438 3.51562H15.8984V7.03125H12.3438V9.41406H15.8984L15.3125 12.9297H12.3438V20H17.0703C18.6856 20 20 18.6856 20 17.0703V2.92969C20 1.31439 18.6856 0 17.0703 0Z" fill="white"/>
+                                </svg>
+                        </a>
+                        <a href="https://t.me/Qunthunnan0">
+                            <svg width="20" height="20" viewBox="0 0 30 30" fill="" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 30C23.2863 30 30 23.2863 30 15C30 6.71375 23.2863 0 15 0C6.71375 0 0 6.71375 0 15C0 23.2863 6.71375 30 15 30ZM6.86375 14.675L21.3263 9.09875C21.9975 8.85625 22.5837 9.2625 22.3662 10.2775L22.3675 10.2762L19.905 21.8775C19.7225 22.7 19.2337 22.9 18.55 22.5125L14.8 19.7487L12.9912 21.4913C12.7912 21.6913 12.6225 21.86 12.235 21.86L12.5013 18.0438L19.4513 11.765C19.7537 11.4987 19.3837 11.3488 18.985 11.6138L10.3963 17.0212L6.69375 15.8663C5.89 15.6112 5.8725 15.0625 6.86375 14.675Z" fill="white"/>
+                                </svg> 
+                        </a>
+                    </div>
+
+                    <div class="contacts__descr">Або залиште свої данні, я з вами зв’яжусь</div>
+
+                    <form action="#" class="contacts__form">
+                        <div class="contacts__name-input">
+                            <input required name="name" type="text">
+                            <label for="name">Ваше ім'я</label>
+                        </div>
+
+                        <div class="contacts__email-input">
+                            <input required name="email" type="email">
+                            <label for="email">Ваша пошта</label>
+                        </div>
+
+                        <div class="contacts__message">
+                            <textarea name="message"></textarea>
+                            <label for="message">Ваше повідомлення</label>
+                        </div>
+
+                        <button class="button button_contacts">Відправити лист</button>
+                        
+                        <div class="contacts__policy">
+                            <input required name="policy" type="checkbox">
+                            <label for="policy">Я згоден(на) з <a href="/policy.html">політикою конфіденційності</a></label>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </section>
