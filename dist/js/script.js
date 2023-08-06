@@ -42,3 +42,73 @@ percentage.forEach((item, i) => {
     progressBar[i].style.width = item.innerHTML;
 });
 // scroll 
+$(document).ready(function() {
+    function scroll(item) {
+        $(item).click(function(){
+            const _href = $(item).attr("href");
+            $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+            return false;
+        });
+    }
+
+    scroll($("a[href=#about-me]"));
+    scroll($("a[href=#exp-edu]"));
+    scroll($("a[href=#tools]"));
+    scroll($("a[href=#portfolio]"));
+    scroll($("a[href=#contacts]"));
+});
+//validator
+function validateForm (form){
+    let validation =
+$(form).validate({
+    rules: {
+        name: {
+            required: true,
+            minlength: 2
+        },
+        email: {
+            required: true,
+            email: true
+        },
+        policy: {
+            required: true
+        }
+    },
+    messages: {
+        name: {
+            required: "Введіть, будь ласка, своє ім'я",
+            minlength: "Мінімальна довжина імені: {0} символа"
+        },
+        email: {
+            required: "Введіть, будь ласка, свою електронну скриньку",
+            email: "Перевірте, чи павильно ви написали пошту, повинен бути символ @"
+        },
+        policy: {
+            required: "Необхідна ваша згода, щоби залишити повідомлення."
+        }
+    }
+});
+return validation.form();
+ }
+//send mail
+$(".contacts__form").submit(function (e) {
+    e.preventDefault();
+    if(validateForm(this) == true) {
+        // $('.client-form__loading').fadeIn();
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function () {
+        $(this).find("input").val("");
+        $("form").trigger("reset");
+
+        // $('.client-form__loading').fadeOut();
+        // $(".overlay .modal").fadeOut('slow');
+        // $(".overlay, #buy-done").fadeIn('slow');
+    })
+    }
+
+    return false;
+});
+

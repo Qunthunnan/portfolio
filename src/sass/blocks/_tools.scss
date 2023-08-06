@@ -4,9 +4,9 @@
     &__wrapper {
         margin-top: 60px;
         display: grid;
-        grid-template:  repeat(2, minmax(270px, auto)) / repeat(4, minmax(270px, 320px));
-        grid-auto-columns: minmax(270px, 320px);
-        grid-auto-rows: minmax(270px, auto);
+        grid-template: repeat(2,270px)/repeat(4,270px);
+        grid-auto-columns: 270px;
+        grid-auto-rows: 270px;
         gap: 13px;
         justify-content: center;
     }

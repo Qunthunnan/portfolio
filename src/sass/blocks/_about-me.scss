@@ -3,7 +3,7 @@
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 422px minmax(590px);
+        grid-template-columns: 422px 590px;
         grid-template-rows: 245px minmax(150px, auto);
         column-gap: 50px;
         row-gap: 30px;
@@ -13,11 +13,14 @@
     }
 
     &__my-photo {
+        width: 100%;
         grid-area: myphoto;
         img {
             border-radius: 20px;
             display: block;
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
@@ -34,14 +37,16 @@
     &__skills {
         grid-area: skills;
         display: grid;
-        grid-template-columns: repeat(auto-fit, 260px);
+        grid-template-columns: repeat(2, 260px);
+        gap: 20px;
         grid-template-rows: auto auto;
+        justify-content: center;
         // grid-auto-columns: 300px;
         // grid-auto-rows: 130px;
     }
 
     &__skill {
-        width: 260px;
+        width: 100%;
         display: flex;
     }
 
