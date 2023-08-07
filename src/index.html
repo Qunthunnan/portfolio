@@ -109,7 +109,11 @@
         <div class="container">
             <div class="about-me__wrapper">
                 <div class="about-me__my-photo">
-                    <img src="img/my-photo.jpg" alt="my-photo">
+                    <picture>
+                        <source type="image/webp" srcset="img/my-photo.webp" media="(max-width: 576px)">
+                        <source media="(min-width: 577px)" srcset="img/my-photo.jpg">
+                        <img src="img/my-photo.jpg" alt="my-photo">
+                    </picture>
                 </div>
 
                 <div class="about-me__content">
@@ -347,12 +351,48 @@
             <h2 class="title title_portfolio">Мої роботи</h2>
 
             <div class="portfolio__wrapper">
-                <a href="#" class="portfolio__item"><img src="img/works/uber.jpg" alt="uber"></a>
-                <a href="#" class="portfolio__item"><img src="img/works/pulse.jpg" alt="pulse"></a>
-                <a href="#" class="portfolio__item"><img src="img/works/bread.jpg" alt="bread"></a>
-                <a href="#" class="portfolio__item portfolio__item-vertical"><img src="img/works/plans.jpg" alt="plans"></a>
-                <a href="#" class="portfolio__item"><img src="img/works/ipad.jpg" alt="ipad"></a>
-                <a href="#" class="portfolio__item portfolio__item-horizontal"><img src="img/works/mac.jpg" alt="mac"></a>
+                <a href="#" class="portfolio__item">
+                    <picture>
+                        <source type="image/webp" srcset="img/works/uber.webp" media="(max-width: 576px)">
+                        <source media="(min-width: 577px)" srcset="img/works/uber.jpg">
+                        <img src="img/works/uber.jpg" alt="uber">
+                    </picture>
+                </a>
+                <a href="#" class="portfolio__item">
+                    <picture>
+                        <source type="image/webp" srcset="img/works/pulse.webp" media="(max-width:576px)">
+                        <source media="(min-width: 577px)" srcset="img/works/pulse.jpg">
+                        <img src="img/works/pulse.jpg" alt="pulse">
+                    </picture>
+                </a>
+                <a href="#" class="portfolio__item">
+                    <picture>
+                        <source type="image/webp" srcset="img/works/bread.webp" media="(max-width: 576px)">
+                        <source media="(min-width: 577px)" srcset="img/works/bread.jpg">
+                        <img src="img/works/bread.jpg" alt="bread">
+                    </picture>
+                </a>
+                <a href="#" class="portfolio__item portfolio__item-vertical">
+                    <picture>
+                        <source type="image/webp" srcset="img/works/plans.webp" media="(max-width: 576px)">
+                        <source media="(min-width: 577px)" srcset="img/works/plans.jpg">
+                        <img src="img/works/plans.jpg" alt="plans">
+                    </picture>
+                </a>
+                <a href="#" class="portfolio__item">
+                    <picture>
+                        <source type="image/webp" srcset="img/works/ipad.webp" media="(max-width: 576px)">
+                        <source media="(min-width: 577px)" srcset="img/works/ipad.jpg">
+                        <img src="img/works/ipad.jpg" alt="ipad">
+                    </picture>
+                </a>
+                <a href="#" class="portfolio__item portfolio__item-horizontal">
+                    <picture>
+                        <source type="image/webp" srcset="img/works/mac.webp" media="(max-width: 576px)">
+                        <source media="(min-width: 577px)" srcset="img/works/mac.jpg">
+                        <img src="img/works/mac.jpg" alt="mac">
+                    </picture>
+                </a>
             </div>
         </div>
     </section>
