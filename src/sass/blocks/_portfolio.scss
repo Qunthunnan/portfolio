@@ -11,10 +11,20 @@
     &__item {
         display: block;
         width: 100%;
+        transition: all 0.1s;
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
+            border-radius: 20px;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+        &-none {
+            &:hover {
+                filter: grayscale(1);
+            }
         }
     }
 

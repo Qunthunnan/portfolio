@@ -258,6 +258,16 @@
             grid-template: repeat(4,230px)/repeat(2,230px);
         }
 
+        &__item {
+            &:hover{
+                transform: unset;
+                filter: unset;
+            }
+            &-none {
+                filter: grayscale(1);
+            }
+        }
+
         &__item-vertical {
             grid-row: 2 / 4;
             grid-column: 2 / 3;
@@ -561,6 +571,15 @@
             margin: -45px auto;
             padding: 0px 20px;
             width: 157px;
+        }
+    }
+
+    .none {
+        &__back-link {
+            margin-top: 30px;
+            &:hover {
+                color: white;
+            }
         }
     }
 }

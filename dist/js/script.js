@@ -94,7 +94,7 @@ return validation.form();
 $(".contacts__form").submit(function (e) {
     e.preventDefault();
     if(validateForm(this) == true) {
-        // $('.client-form__loading').fadeIn();
+        $('.contacts__mail-sending').fadeIn();
     $.ajax({
         type: "POST",
         url: "mailer/smart.php",
@@ -103,9 +103,8 @@ $(".contacts__form").submit(function (e) {
         $(this).find("input").val("");
         $("form").trigger("reset");
 
-        // $('.client-form__loading').fadeOut();
-        // $(".overlay .modal").fadeOut('slow');
-        // $(".overlay, #buy-done").fadeIn('slow');
+        $('.contacts__mail-sending').fadeOut();
+        $('.contacts__mail-sended').fadeIn();
     })
     }
 

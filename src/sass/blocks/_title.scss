@@ -27,6 +27,27 @@ h1, h2, h3, h4, h5, h6 {
             transform: translateX(-50%);
         }
     }
+
+    &_none-first {
+        text-align: center;
+        color: white;
+        font-size: 50px;
+        &::after {
+            display: none;
+        }
+    }
+
+    &_none {
+        text-align: center;
+        color: white;
+        position: relative;
+        margin-top: 30px;
+        &::after {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
 
 .uptitle {
@@ -66,6 +87,19 @@ h1, h2, h3, h4, h5, h6 {
             top: 52px;
             left: 50%;
             transform: translateX(-50%);
+        }
+    }
+
+    &_none {
+        text-align: center;
+        color: white;
+        margin-top: 40px;
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .none-bold {
+            color: $main-color;
         }
     }
 

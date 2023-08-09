@@ -1,0 +1,479 @@
+@media (max-width: 1400px)
+	header
+		a.menu_item
+			padding: 0px 40px
+		a.tel
+			font-size: 20px
+@media (max-width: 1199px)
+	header
+		a.menu_item
+			padding: 0px 25px
+		a.tel
+			font-size: 17px
+
+	.main
+		.title
+			font-size: 53px
+
+	.reasons
+		.circle
+			margin-right: 12px
+		.reason_text_wrap
+			width: 328px
+	.mobile
+		&_item
+			height: 259px
+			width: 297px
+
+	footer
+		.left_side
+			width: 30%
+		.center_side
+			width: 40%
+		.right_side
+			width: 30%
+			padding-right: 20px
+			.store_links
+				flex-direction: column
+				margin: 0px
+				align-items: end
+				.google_play
+					background-image: url(../img/icons/google_play.svg)
+					background-size: 135%
+					background-position: center
+
+@media (max-width: 991px)
+	header
+		a.menu_item
+			padding: 0px 12px
+			font-size: 13px
+	
+	.sub_header
+		.logo
+			width: 100%
+		.logo_text
+			font-size: 12px
+			margin-top: 6px
+		.call-text
+			margin-top: 15px
+			text-align: center
+		.tel
+			font-size: 18px
+			display: block
+			text-align: center
+
+	.main
+		padding: 118px 0px 151px 0px
+		min-height: 712px
+		.title
+			font-size: 48px
+		.title_invite
+			font-size: 29px
+
+	.reasons
+		.title
+			font-size: 34px
+		.reason_wrap
+			flex-direction: column
+		.reason_text_wrap
+			margin-top: 8px
+
+	.mobile
+		.title
+			font-size: 34px
+		.sub_title
+			font-size: 15px
+		&_item
+			width: 320px
+			height: 280px
+		&_item_title
+			font-size: 22px
+
+	.choice
+		.auto
+			width: 700px
+		.second_bg
+			padding: 217px 0px 109px 0px
+			min-height: 349px
+
+	.terms
+		min-height: 842px
+		.term_blue, .term_red
+			width: 350px
+		.term_title
+			font-size: 22px
+			line-height: 22px
+		.term_point
+			font-size: 15px
+
+	footer
+		.left_side
+			width: 25%
+		.center_side
+			width: 50%
+		.right_side
+			width: 25%
+
+@media (max-width: 767px)
+	header
+		.head_menu_wrap
+			position: relative
+			.container
+				max-width: 100%
+				margin: 0px
+				padding: 0px
+				display: flex
+				justify-content: right
+		.menu_btn
+			display: block
+			height: 30px
+			width: 50px
+			position: absolute 
+			right: 30px
+			top: 50%
+			transform: translateY(-50%)
+			span
+				margin-top: 5px
+				height: 3px
+				width: 100%
+				display: block
+				background: white
+				transition: 0.5s
+			&_active
+				span
+					margin-top: -2px
+					&:nth-child(1)
+						transform: translateY(15px) rotate(45deg)
+					&:nth-child(2)
+						display: none
+					&:nth-child(3)
+						transform: translateY(15px) rotate(-45deg)
+					
+		ul.menu
+			position: fixed
+			height: 100vh
+			width: 50vw
+			background: rgba(1, 1, 1, 0.8)
+			flex-direction: column
+			z-index: 3
+			left: -100%
+			transition: 0.5s
+		
+		ul.menu_active
+			left: 0
+
+		a.menu_item
+			border: none
+			padding: 0px 7px
+			font-size: 15px
+			font-weight: 500
+	.sub_header
+		.logo_text
+			font-size: 8px
+		.call_text
+			font-size: 10px
+			margin-top: 18px
+		.tel
+			font-size: 12px
+		.order_call
+			height: 42px
+			width: 119px
+			font-size: 10px
+
+	.main
+		min-height: 532px
+		padding: 113px 0px 102px 0px
+		.title
+			font-size: 35px
+			line-height: 35px
+		.title_invite
+			font-size: 22px
+			line-height: 22px
+		.promo_text
+			font-size: 14px
+			line-height: 14px
+		.send_resume_btn
+			height: 51px
+			width: 204px
+			margin-top: 72px
+			font-size: 15px
+
+	.reasons
+		.title
+			font-size: 24px
+		.circle
+			height: 100px
+			width: 100px
+		.reason_text_wrap
+			width: 260px
+		.reason_title
+			font-size: 16px
+		.reason_descr
+			font-size: 13px
+
+	.mobile
+		.title
+			font-size: 24px
+		.sub_title
+			font-size: 14px
+		.mobile_item
+			height: 218px
+			width: 250px
+		.mobile_item_title
+			font-size: 17px
+			line-height: 19px
+
+	.choice
+		.blue_bg
+			min-height: 449px
+		.title
+			font-size: 33px
+		.sub_title
+			font-size: 15px
+		.auto
+			width: 500px
+			top: 263px
+		.second_bg
+			padding: 217px 0px 109px 0px
+			min-height: 349px
+
+	.terms
+		min-height: 796px
+		.title
+			font-size: 33px
+		.sub_title
+			font-size: 15px
+		.term_blue, .term_red
+			width: 250px
+		.term_list
+			padding-left: 30px
+		.term_title
+			font-size: 17px
+			line-height: 22px
+		.term_point
+			font-size: 13px
+			&::before
+				left: -27px
+				width: 18px
+				height: 17px
+		.term_descr
+			font-size: 14px
+
+	.world
+		min-height: 500px
+
+	footer
+		height: 255px
+		padding: 24px 0px 30px 0px
+		.wrapper
+			flex-direction: column
+			align-items: center
+		.left_side
+			width: 100%
+			order: 2
+			.socials
+				justify-content: center
+				margin: 0px
+				margin-top: 15px
+		.center_side
+			width: 100%
+			order: 1
+		.right_side
+			padding: 0
+			width: 50%
+			order: 3
+			.store_links
+				margin-top: 15px
+				flex-direction: row
+				a
+					height: 23px
+
+
+@media (max-width: 575px)
+	header
+		.head_menu_wrap
+			height: 30px
+		a.menu_item
+			padding: 0px
+			font-size: 13px
+			text-align: center
+		.menu_btn
+			height: 10px
+			width: 25px
+			right: 10px
+			top: 35%
+			span
+				height: 2px
+				margin-top: 3px
+			&_active
+				span
+					margin-top: -2px
+					&:nth-child(1)
+						transform: translateY(10px) rotate(45deg)
+					&:nth-child(2)
+						display: none
+					&:nth-child(3)
+						transform: translateY(10px) rotate(-45deg)
+
+		.sub_header
+			height: 60px
+			.logo
+				width: 130px
+				margin-top: 0px
+			.call_text, .tel, .logo_text, .mobile_hide
+				display: none
+			.mobile_view
+				align-self: flex-end
+				margin-top: 5px
+				margin-right: 15px
+				color: #ffffff
+				display: block
+				font-size: 12px
+				font-weight: 400
+				text-align: center
+			
+			.mobile_align
+				display: flex
+				flex-direction: column
+
+			.order_call
+				align-self: flex-end
+				margin-top: 4px
+				width: 110px
+				height: 22px
+				font-size: 7px
+				box-shadow: rgba(1, 1, 1, 0.3) 0px 0px 0px 2px, rgba(1, 1, 1, 0.3) inset 0px -2px
+
+	.main
+		min-height: 400px
+		padding: 104px 0px 30px 0px
+		.title
+			font-size: 30px
+			line-height: 30px
+		.title_invite
+			font-size: 20px
+			line-height: 20px
+		.promo_text
+			display: none
+		.send_resume_btn
+			height: 50px
+			width: 210px
+			margin-top: 87px
+
+	.reasons
+		.title
+			margin-top: 15px
+			font-size: 15px
+			line-height: 15px
+		.reason_text_wrap
+			width: 292px
+		.reason_descr
+			font-size: 15px
+	.mobile
+		padding: 25px 0px
+		.title
+			margin-top: 15px
+			font-size: 15px
+			line-height: 15px
+		.mobile_item
+			// margin: 0 auto
+			margin: 15px auto
+			height: 254px
+			width: 290px
+			padding: 73px 31px
+		.mobile_item_title
+			font-size: 18px
+			line-height: 31px
+		
+	.choice
+		.blue_bg
+			padding-top: 20px
+			min-height: 390px
+		.title
+			display: none
+		.sub_title
+			display: none
+		.auto
+			width: 300px
+			top: 80px
+		.mobile_show_text
+			display: block
+			font-size: 17px
+			font-weight: 300
+			line-height: 24px
+			text-align: center
+			color: #fff
+			position: absolute
+			bottom: 30px
+			left: 50%
+			transform: translateX(-50%)
+		.second_bg
+			display: none
+
+	.terms
+		padding: 20px 0px 30px 0px
+		min-height: 960px
+		.title
+			font-size: 16px
+			margin-top: 13px
+		.sub_title
+			display: none
+		.term_blue, .term_red
+			width: 100%
+		.term_list
+			padding-left: 27px
+		.term_title
+			margin-top: 20px
+			font-size: 16px
+			line-height: 22px
+		.term_point
+			font-size: 14px
+			&::before
+				left: -27px
+				width: 18px
+				height: 17px
+		.term_descr
+			font-size: 14px
+		
+	.world
+		padding: 0px
+		padding-top: 20px
+		min-height: 360px
+		.title
+			margin-top: 13px
+			font-size: 16px
+			line-height: 16px
+		.sub_title
+			font-size: 14px
+		a.all_cities
+			width: 100%
+			display: block
+			bottom: 30px
+			font-size: 15px
+			line-height: 15px
+
+	footer
+		padding: 24px 15px 30px 15px
+		.line
+			&::before
+				width: 255px
+		.center_side
+			.menu_upper
+				margin-top: 15px
+				.menu
+					a
+						&:link, &:visited
+							font-size: 14px
+
+			.menu_lover
+				.menu
+					padding: 0px
+					flex-wrap: wrap
+			a.language
+				&:link, &:visited
+					margin-top: 10px
+
+		.right_side
+			width: 100%
+			.store_links
+				justify-content: center
