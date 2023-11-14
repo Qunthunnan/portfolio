@@ -29,6 +29,10 @@
         margin-top: 45px;
         width: 375px;
         position: relative;
+        a:link, a:visited {
+            color: black;
+            text-decoration:underline;
+        }
         &::before {
             content: '';
             position: absolute;

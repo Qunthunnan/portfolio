@@ -24,8 +24,9 @@
 
     &__socials {
         margin-top: 20px;
-        a {
+        a, a:link, a:visited {
             margin-right: 25px;
+            text-decoration: none;
         }
         svg {
             height: 30px;

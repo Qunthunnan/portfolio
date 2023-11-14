@@ -4,7 +4,7 @@
     &__wrapper {
         margin-top: 60px;
         display: grid;
-        grid-template: repeat(2,270px)/repeat(4,270px);
+        grid-template: repeat(2,270px)/repeat(3,270px);
         grid-auto-columns: 270px;
         grid-auto-rows: 270px;
         gap: 13px;
@@ -22,8 +22,17 @@
         display: flex;
         align-items: center;
         img {
-            max-width: 100%;
+            max-height: 100%;
             display: block;
+        }
+        &-multi {
+            justify-content: space-between;
+            img, svg {
+                width: 60px;
+                &:first-child {
+                    width: unset;
+                }
+            }
         }
     }
 
