@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Uber</title>
-    <link rel="stylesheet" href="css/style.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -12,6 +11,8 @@
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#727272">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <header id="header">
@@ -49,6 +50,32 @@
                             <button class="order_call">замовити дзвінок</button>
                         </div>
                     </div>
+
+                    <div class="phone">
+                        <div class="phone__window phone__window_order">
+                            <div class="phone__window-close">
+                                <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M18.221,7.206l9.585,9.585c0.879,0.879,0.879,2.317,0,3.195l-0.8,0.801c-0.877,0.878-2.316,0.878-3.194,0  l-7.315-7.315l-7.315,7.315c-0.878,0.878-2.317,0.878-3.194,0l-0.8-0.801c-0.879-0.878-0.879-2.316,0-3.195l9.587-9.585  c0.471-0.472,1.103-0.682,1.723-0.647C17.115,6.524,17.748,6.734,18.221,7.206z" fill="#fff"/></svg>
+                            </div>
+                            <form action="#" class="phone__form">
+                                <div class="phone__name">
+                                    <label for="name-input">Ім'я</label>
+                                    <input name="name" id="name-input" type="text">
+                                </div>
+                                <div class="phone__number">
+                                    <label for="phone-input">Номер телефону</label>
+                                    <input name="phone" id="phone-input" type="text">
+                                </div>
+                            </form>
+                        </div>
+                
+                        <div class="phone__window phone__window_done">
+                            <div class="phone__window-close">
+                                <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M18.221,7.206l9.585,9.585c0.879,0.879,0.879,2.317,0,3.195l-0.8,0.801c-0.877,0.878-2.316,0.878-3.194,0  l-7.315-7.315l-7.315,7.315c-0.878,0.878-2.317,0.878-3.194,0l-0.8-0.801c-0.879-0.878-0.879-2.316,0-3.195l9.587-9.585  c0.471-0.472,1.103-0.682,1.723-0.647C17.115,6.524,17.748,6.734,18.221,7.206z" fill="#fff"/></svg>
+                            </div>
+                            <div class="phone__window-descr">Записали ваш номер, очікуйте незабаром дзвінка!</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
     </header>
@@ -59,13 +86,13 @@
                 <div class="col-lg-10 offset-lg-1 col-12">
                     <h1 class="title">КОМПАНІЯ UBER PARTNERS!</h1>
                     <h2 class="title_invite">ЗАПРОШУЄМО ВОДІЇВ! НА СВОЄМУ АВТО!</h2>
-                    <div class="promo_text">Компанія UBER динамічно розвивається. Компанія на ринку займає лідируючу позицію серед таксомоторних компаній, Компанія абсолютно прозора ви можете контролювати всі процеси у себе в особистому кабінеті. Бонусна система. Крім виконаної роботи на замовлення, компанія нараховує бонуси запічний час.
+                    <div class="promo_text">Компанія UBER динамічно розвивається. Компанія на ринку займає провідну позицію серед таксомоторних компаній, Компанія абсолютно прозора ви можете контролювати всі процеси у себе в особистому кабінеті. Бонусна система. Крім виконаної роботи на замовлення, компанія нараховує бонуси запічний час.
                     <br>
                     <br>
                     Ми одні з партнерів та зарекомендували себе як одна з найкращих команд у місті Київ. Водії у нас заробляють від 15 000 – 30 000 на місяць.</div>
                 </div>
             </div>
-            <button class="send_resume_btn">ВІДПРАВИТИ ЗАЯВКУ!</button>
+            <a target="_blank" href="https://www.uber.com/in/en/s/e/join/" class="send_resume_btn">ВІДПРАВИТИ ЗАЯВКУ!</a>
         </div>
     </section>
 
@@ -106,7 +133,7 @@
                         <div class="circle"><img src="img/icons/reason_4.png" alt="" class="reason_icon"></div>
                         <div class="reason_text_wrap">
                             <div class="reason_title">Робота в зручний час, жодних графіків</div>
-                            <div class="reason_descr">Ви просто натискаєте кнопку вийти на лінію для початку роботи, коли вирішите закінчити натискаєте вийти з лінії. Ви можете подроби-
+                            <div class="reason_descr">Ви просто натискаєте кнопку вийти на лінію для початку роботи, коли вирішите закінчити натискаєте вийти з лінії. Ви можете підробляти
                                 тільки вранці, ввечері, у вихідні чи святкові дні!</div>
                         </div>
                     </div>
@@ -116,7 +143,7 @@
                         <div class="circle"><img src="img/icons/reason_5.png" alt="" class="reason_icon"></div>
                         <div class="reason_text_wrap">
                             <div class="reason_title">Комфортне, прозоре та просте підключення</div>
-                            <div class="reason_descr">Ми підключаємо дистанційно та безкоштовно, Вам не потрібно приїжджати до нас! Ви надсилаєте нам копії документів, ми реєструємо Вас та надсилаємо дані для підключення, через 1-2 дні Ви можете починати працювати!</div>
+                            <div class="reason_descr">Ми підключаємо дистанційно та безоплатно, Вам не потрібно приїжджати до нас! Ви надсилаєте нам копії документів, ми реєструємо Вас та надсилаємо дані для підключення, через 1-2 дні Ви можете починати працювати!</div>
                         </div>
                     </div>
                 </div>
@@ -134,7 +161,7 @@
                         <div class="circle"><img src="img/icons/reason_7.png" alt="" class="reason_icon"></div>
                         <div class="reason_text_wrap">
                             <div class="reason_title">Цілодобова підтримка</div>
-                            <div class="reason_descr">У Uber діє цілодобова підтримка водіїв електронною поштою. Якщо щось незрозуміло, Ви завжди можете поставити запитання через On-line консультацію.</div>
+                            <div class="reason_descr">В Uber діє цілодобова підтримка водіїв електронною поштою. Якщо щось незрозуміло, Ви завжди можете поставити запитання через On-line консультацію.</div>
                         </div>
                     </div>
                 </div>
@@ -160,44 +187,38 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="mobile_item  mobile_item_1">
                         <div class="mobile_item_title">оформлення замовлення одним дотиком</div>
-                        <div class="mobile_item_plus">
-                        </div>
+                        <a target="_blank" href="https://apps.apple.com/us/app/uber-request-a-ride/id368677368" class="mobile_item_plus"></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="mobile_item mobile_item_2">
                         <div class="mobile_item_title">надійна подача</div>
-                        <div class="mobile_item_plus">
-                        </div>
+                        <a target="_blank" href="https://apps.apple.com/us/app/uber-request-a-ride/id368677368" class="mobile_item_plus"></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="mobile_item  mobile_item_3">
                         <div class="mobile_item_title">прозорі ціни</div>
-                        <div class="mobile_item_plus">
-                        </div>
+                        <a target="_blank" href="https://apps.apple.com/us/app/uber-request-a-ride/id368677368" class="mobile_item_plus"></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="mobile_item  mobile_item_4">
                         <div class="mobile_item_title">безготівкова оплата</div>
-                        <div class="mobile_item_plus">
-                        </div>
+                        <a target="_blank" href="https://apps.apple.com/us/app/uber-request-a-ride/id368677368" class="mobile_item_plus"></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="mobile_item  mobile_item_5">
-                        <div class="mobile_item_title">Зворотній зв'язок</div>
-                        <div class="mobile_item_plus">
-                        </div>
+                        <div class="mobile_item_title">Зворотний зв'язок</div>
+                        <a target="_blank" href="https://apps.apple.com/us/app/uber-request-a-ride/id368677368" class="mobile_item_plus"></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="mobile_item  mobile_item_6">
                         <div class="mobile_item_title">розділити
                             вартість поїздки</div>
-                        <div class="mobile_item_plus">
-                        </div>
+                        <a target="_blank" href="https://apps.apple.com/us/app/uber-request-a-ride/id368677368" class="mobile_item_plus"></a>
                     </div>
                 </div>
             </div>
@@ -248,8 +269,8 @@
                         <h3 class="term_title">УМОВИ: на авто компанії:</h3>
                         <ul class="term_list">
                             <li class="term_point">Надаємо авто без застави</li>
-                            <li class="term_point">Без ежедневных выплат по аренде</li>
                             <li class="term_point">Без щоденних виплат з оренди</li>
+                            <li class="term_point">Середа п'ятниця та субота робота на компанію - решту днів ви працюєте на себе</li>
                         </ul>
                     </div>
                 </div>
@@ -331,6 +352,8 @@
     </footer>
 
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/libphonenumber-js@1.10.49/bundle/libphonenumber-max.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/intlTelInput.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>

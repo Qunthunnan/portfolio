@@ -1,0 +1,189 @@
+.header {
+    height: 85px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__mobile-menu {
+        display: none;
+    }
+    &__country {
+        margin-top: 20px;
+        height: 50px;
+        width: 250px;
+        display: flex;
+        &-image {
+            display: block;
+            height: 21px;
+            margin-right: 11px;
+        }
+        &-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0px;
+        }
+        &-text {
+            font-size: 13px;
+            font-weight: 300;
+            a:link, a:visited {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+    &__mobile-button {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 15px;
+        width: 30px;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgba(255, 255, 255, 0);
+        display: none;
+        span {
+            transition: 0.5s;
+            display: block;
+            height: 1px;
+            width: 28px;
+            background-color: black;
+        }
+    }
+
+    &__mobile-button-menu-active {
+        justify-content: center;
+        span {
+            &:nth-child(1) {
+                transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 1399px) {
+    .header {
+        &__country {
+            margin-top: 10px;
+            &-text {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        &__country {
+            margin-top: 24px;
+            &-image {
+                margin-right: 5px;
+            }
+            &-text{
+                &-adress, &-mail, br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        .container {
+            max-width: 100%;
+        }
+        &__country {
+            margin-top: 10px;
+            flex-direction: column;
+            &-image {
+                margin-right: 0;
+                object-fit: contain;
+                object-position: left;
+            }
+            &-title {
+                margin-top: 5px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        transition: 0.5s;
+        height: 0px;
+        display: flex;
+        &__mobile-button {
+            display: flex;
+            z-index: 4;
+            outline: none;
+        }
+        &_menu-active {
+            height: 70vh;
+            width: 100vw;
+            .header__wrapper {
+                flex-direction: column;
+                justify-content: space-around;
+                height: 100%;
+                .header__country {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 0px;
+                    &-image {
+                        margin-top: 5px;
+                        margin-right: 10px;
+                    }
+                    div {
+                        display: flex;
+                    }
+                    &-title {
+                        margin-top: 10px;
+                        margin-right: 10px;
+                    }
+                    &-text {
+                        margin-top: 8px;
+                    }
+                }
+                .header__mobile-menu {
+                    display: flex;
+                    justify-content: space-between;
+                    &-item {
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: black;
+                        text-transform: uppercase;
+                        &:link, &:visited {
+                            color: black;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        &__country {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 360px) {
+    .header {
+        &_menu-active {
+            .header__wrapper {
+                .header__mobile-menu {
+                    &-item {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
