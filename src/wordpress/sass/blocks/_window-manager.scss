@@ -1,0 +1,341 @@
+
+
+.window-manager {
+    font-weight: 300;
+    --select-width: 165px;
+    --select-height: 40px;
+    --default-border-color: #ccc;
+    --default-hover-color: #e7e7e7;
+    --default-border-radius: 5px;
+    --default-input-width: 300px;
+    --default-height-enabled: unset;
+    --default-height-disabled: 0px;
+    --default-width-disabled: 0px;
+
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__window {
+        background-color: white;
+        border-radius: 5px;
+        padding: 30px;
+        &_book {
+            display: block;
+            opacity: 1;
+        }
+        &_booked {
+            display: none;
+            opacity: 0;
+        }
+        &_registered {
+            display: none;
+            opacity: 0;
+        }
+        &_error {
+            display: none;
+            opacity: 0;
+        }
+
+        &__close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            span {
+                font-size: 22px;
+            }
+        }
+        &__lesson-type {
+            display: flex;
+            flex-direction: column;
+
+            &-select {
+                margin-top: 10px;
+                position: relative;
+                display: block;
+                width: var(--default-input-width);
+    
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    transition: 0.5s all;
+                    display: none;
+                    position: absolute;
+                    list-style: none;
+                    width: var(--select-width);
+                    z-index: 4;
+                    flex-direction: column;
+                }
+    
+                .window-manager__window__lesson-type__item {
+                    padding: 0;
+                    margin: 0;
+                    transition: 0.5s all;
+                    margin: -1px 0px;
+                    &:first-child {
+                        border-radius: 5px 5px 0px 0px;
+                        border-top: 1px solid #ccc;
+                        border-left: 1px solid #ccc;
+                        border-right: 1px solid #ccc;
+                        border-bottom: none;
+                    }
+                    padding: 10px;
+                    cursor: pointer;
+                    position: relative;
+                    background-color: rgb(255, 255, 255);
+                    border-bottom: none;
+                    border-top: none;
+                    border-left: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    &:last-child {
+                        border-radius: 0px 0px 5px 5px;
+                        border-top: none;
+                        border-bottom: 1px solid #ccc;
+                        border-left: 1px solid #ccc;
+                        border-right: 1px solid #ccc;
+                    }
+                    &:hover {
+                        background-color: #e7e7e7;
+                    }
+                }
+            }
+
+            &__message {
+                display: none;
+                position: absolute;
+                top: 0px;
+                right: -301px;
+                width: 300px;
+                padding: 30px;
+                background-color: #e7e7e7;
+                border-radius: 5px;
+            }
+
+            &__message_active {
+                display: block;
+            }
+
+            &-selected {
+                height: var(--select-height);
+                padding: 10px 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+        
+        &__choose-day {
+            display: none;
+            position: relative;
+            flex-direction: column;
+            margin-top: 20px;
+            &__calendar {
+                padding: 0px 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-top: 10px;
+                font-weight: 300;
+                width: var(--default-input-width);
+                height: var(--select-height);
+                outline: none;
+            }
+            &_active {
+                display: flex;
+            }
+        }
+
+        &__choose-time {
+            margin-top: 20px;
+            display: none;
+            &-times {
+                margin-top: 5px;
+                width: var(--default-input-width);
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        transition: 0.5s all;
+                        cursor: pointer;
+                        text-align: center;
+                        min-width: 50px;
+                        margin-top: 5px;
+                        padding: 5px;
+                        margin-right: 5px;
+                        background: #e7e7e7;
+                        border-radius: 30px;
+                        &.active {
+                            background: #a7a7a7;
+                        }
+                    }
+                }
+            }
+            &_active {
+                display: block;
+            }
+        }
+
+        &__email, &__name {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            display: none;
+            input {
+                transition: 0.5s all;
+                margin-top: 10px;
+                border: 1px solid var(--default-border-color);
+                border-radius: var(--default-border-radius);
+                width: var(--default-input-width);
+                height: var(--select-height);
+                font-weight: 300;
+                padding: 0px 10px;
+                outline: none;
+            }
+            &_active {
+                display: flex;
+            }
+        }
+
+        &__submit {
+            display: none;
+            &_active {
+                display: block;
+            }
+        }
+
+        &__validation-error {
+            color: #fe5752;
+            font-size: 13px;
+            width: var(--default-input-width);
+        }
+
+        &__policy {
+            margin-top: 15px;
+            width: var(--default-input-width);
+            font-size: 13px;
+            display: none;
+            flex-wrap: wrap;
+            &_active {
+                display: flex;
+            }
+            input {
+                margin-right: 5px;
+            }
+            .window-manager__window__validation-error {
+                margin-top: 9px;
+            }
+        }
+
+
+        
+        &__descr {
+            text-align: center;
+            width: 500px;
+            font-size: 20px;
+            margin: 0 auto;
+        }
+
+    }
+}
+
+.flatpickr-calendar {
+    left: 0px !important;
+}
+
+.arrowBottom {
+    top: -273px !important;
+}
+
+.arrowTop {
+    top: 75px !important;
+}
+
+@media(max-width: 767px) {
+    .window-manager {
+        &__window {
+            &__descr {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .window-manager {
+        --default-input-width: 87vw;
+        &__window {
+            width: 100vw;
+            &__descr {
+                font-size: 15px;
+                width: var(--default-input-width);
+            }
+        }
+
+    }
+}
+
+@media (max-height: 650px) {
+    .window-manager {
+        &__window {
+            height: 100vh;
+            &_booked, &_registered, &_error {
+                height: unset;
+            }
+        }
+    }
+}
+
+@media (max-height: 600px) {
+    .window-manager {
+        &__window {
+            &__lesson-type-select, &__choose-day__calendar, &__name input, &__email input{
+                margin-top: 6px;
+            }
+
+            &__choose-day, &__choose-time, &__name, &__email {
+                margin-top: 10px;
+            }
+
+            .book-btn_submit, &__name {
+                margin-top: 15px;
+            }
+
+            &__choose-time-times {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media (max-height: 550px) {
+    .window-manager {
+        --select-height: 34px;
+        &__window {
+            padding: 20px;
+            &__lesson-type label, &__choose-day label, &__name label, &__email label{
+                font-size: 14px;
+            }
+
+            &__lesson-type-selected {
+                padding: 7px 15px;
+            }
+
+            .book-btn_submit {
+                height: 35px;
+                padding: 7px 26px;
+                font-size: 18px;
+            }
+
+            &__policy label{
+                width: 85%;
+            }
+
+            &__email label.window-manager__window__validation-error, &__name label.window-manager__window__validation-error {
+                font-size: 12px;
+            }
+        }
+    }
+}
