@@ -885,7 +885,6 @@ window.addEventListener('DOMContentLoaded', () => {
     openWindowBtns.forEach((element)=>{
         if(element.classList[1] !== 'book-btn_submit') {
             element.addEventListener('click', (e)=>{
-                debugger;
                 if(!isOpenedWindow) {
                     isOpenedWindow = true;
                     modalOpenClose(windowManager);
@@ -971,7 +970,6 @@ window.addEventListener('DOMContentLoaded', () => {
                     console.log(timetable);
                     
                     isReseted = true;
-                    debugger;
                     if(answer === true) {
                         windowBooked.querySelector('.window-manager__window__descr').innerText = `Дякую, що записались, ваш вебінар відбудеться:\n ${timetable.lessons[selectedLessonId].lessonTime.toLocaleDateString('uk-UA', {
                             month: 'long',
@@ -1035,7 +1033,6 @@ window.addEventListener('DOMContentLoaded', () => {
         
         if(trueParentElement.classList[1] === windowBook.classList[1]) {
             element.addEventListener('click', e =>{
-                debugger;
                 isOpenedWindow = false;
                 modalOpenClose(windowManager);
             });
@@ -1051,15 +1048,4 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
-    // scroll
-    function scroll(item) {
-        $(item).click(function(){
-            const _href = $(item).attr("href");
-            $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-            return false;
-        });
-    }
-
-    scroll($("a[href=#waiting]"));
 });
