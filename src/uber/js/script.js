@@ -197,8 +197,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 modalSwitchDone(phoneManager);
                 document.querySelector('.phone__form').reset();
                 orderCallBtn.classList.remove('order_call_active');
-            } else {
-                console.log('No validation((');
             }
     
         } else {
@@ -209,7 +207,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     phoneWindowCloseBtn.forEach((item)=>{
         item.addEventListener('click', (e)=> {
-            console.dir(e.target.parentNode);
             if(doneOrderCallShow) {
                 doneOrderCallShow = false;
                 modalOpenClose(phoneManager, ()=>{

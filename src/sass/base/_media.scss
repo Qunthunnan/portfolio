@@ -255,7 +255,7 @@
     .portfolio {
         &__wrapper {
             margin-top: 40px;
-            grid-template: repeat(4,230px)/repeat(2,230px);
+            grid-template: repeat(4,1fr)/repeat(2,1fr);
         }
 
         &__item {
@@ -264,6 +264,9 @@
                 filter: unset;
             }
             &-none {
+                &:hover {
+                    filter: grayscale(1);
+                }
                 filter: grayscale(1);
             }
         }
@@ -515,7 +518,6 @@
         padding: 20px 0px 20px 0px;
         &__wrapper {
             margin-top: 30px;
-            grid-template: repeat(4, 1fr)/repeat(2, 1fr);
         }
     }
 
