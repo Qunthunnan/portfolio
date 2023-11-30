@@ -114,7 +114,7 @@ function modalSwitchToAnother(modalWindow) {
 }
 
 function inputValidation(input) {
-	if(input.name == 'name') {
+	if(input.name === 'name') {
 		const formatName = /^[\s]*[^\!\@\#\$\%\^\&\*\=\+\~\`\{\}\[\]\\\|\'\"\;\:\/\?\.\>\,\<]*$/;
 		const minNameLength = 2;
 		const maxNameLength = 255;
@@ -137,7 +137,7 @@ function inputValidation(input) {
 		}
 	}
 
-	if(input.name == 'phone') {
+	if(input.name === 'phone') {
 		try {
 			if(libphonenumber.parsePhoneNumber(input.value).isValid()) {
 				deleteError(input);
@@ -152,7 +152,7 @@ function inputValidation(input) {
 			}
 		}
 
-	if(input.name == 'policy') {
+	if(input.name === 'policy') {
 		if(input.checked) {
 			deleteError(input);
 			return true
@@ -216,6 +216,7 @@ const smallDisplay = window.matchMedia('(max-width: 991px)'),
 let iti = window.intlTelInput(phoneInput, {
 		utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/utils.js',
 		initialCountry: 'auto',
+		excludeCountries: ['ru', 'kp', 'ir', 'sy'],
 	}),
 	users = [],
 	closeInId,
@@ -224,6 +225,11 @@ let iti = window.intlTelInput(phoneInput, {
 
 phoneInput.addEventListener('input', function (e) {
 	let phoneNumber = phoneInput.value;
+	if(phoneNumber.length === 1 && !iti.getSelectedCountryData().iso2) {
+		if(phoneNumber !== '+') {
+			phoneNumber = `+${phoneInput.value}`;
+		}
+	}
 	let formattedNumber = formatPhoneNumber(phoneNumber);
 	phoneInput.value = formattedNumber;
 	inputValidation(e.target);
@@ -248,12 +254,11 @@ modalSubmitBtn.addEventListener('click', (e)=>{
 			userFirstName: nameInput.value,
 			userPhone: libphonenumber.parsePhoneNumber(phoneInput.value).number
 		}
+
 		users.push(userData);
 		console.dir(users);
 		modalSwitchDone(modal);
 		document.querySelector('.modal__form').reset();
-	} else {
-		console.log('No validation((');
 	}
 });
 

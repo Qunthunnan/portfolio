@@ -80,7 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     
     function inputValidation(input) {
-        if(input.name == 'name') {
+        if(input.name === 'name') {
             const formatName = /^[\s]*[^\!\@\#\$\%\^\&\*\=\+\~\`\{\}\[\]\\\|\'\"\;\:\/\?\.\>\,\<]*$/;
             const minNameLength = 2;
             const maxNameLength = 255;
@@ -104,7 +104,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     
-        if(input.name == 'phone') {
+        if(input.name === 'phone') {
             try {
                 if(libphonenumber.parsePhoneNumber(input.value).isValid()) {
                     deleteError(input);
@@ -121,7 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         return false;
     }
-    
+
     function showErrors(input, error) {
         if(!!input.parentNode.querySelector('.phone__form-error') == false) {
             const errorElement = document.createElement('label');
@@ -162,8 +162,9 @@ window.addEventListener('DOMContentLoaded', () => {
           nameInput = document.querySelector('#name-input');
 
     let iti = window.intlTelInput(phoneInput, {
-    utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/utils.js',
     initialCountry: 'auto',
+    excludeCountries: ['ru', 'kp', 'ir', 'sy'],
+    utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/utils.js',
 }),
     users = [],
     closeInId,
@@ -173,6 +174,11 @@ window.addEventListener('DOMContentLoaded', () => {
     
     phoneInput.addEventListener('input', function (e) {
         let phoneNumber = phoneInput.value;
+        if(phoneNumber.length === 1 && !iti.getSelectedCountryData().iso2) {
+            if(phoneNumber !== '+') {
+                phoneNumber = `+${phoneInput.value}`;
+            }
+        }
         let formattedNumber = formatPhoneNumber(phoneNumber);
         phoneInput.value = formattedNumber;
         inputValidation(e.target);
