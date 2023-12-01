@@ -80,11 +80,7 @@
         height: 100vh;
         width: 100vw;
         background-color: rgba(255, 231, 231, 0.438);
-        transition: 0.3s;
     }
-    // &__menu-overlay_active {
-    //     right: 0px;
-    // }
 
     &__menu-block {
         height: 100vh;
@@ -101,19 +97,6 @@
     &__menu-block_active {
         left: 0px;
     }
-
-    &__menu-wrapper_active{
-        // position: fixed;
-        // top: 0px;
-        // left: 0px;
-        // display: flex;
-        // height: 100vh;
-        // width: 100vw;
-    }
-
-    // &__menu-block_active {
-    //     left: 0%;
-    // }
 
     &__menu-close {
         position: absolute;

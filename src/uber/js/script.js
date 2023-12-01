@@ -253,4 +253,4 @@ window.addEventListener('DOMContentLoaded', () => {
     scroll($("a[href=#reasons]"));
     scroll($("a[href=#terms]"));
     scroll($("a[href=#footer]"));
-})
+});
