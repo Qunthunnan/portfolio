@@ -11,7 +11,11 @@ mailer
 users.json
 
 wordpress/mailer
+wordpress/users.json
 pulse/mailer
+pulse/mailer/users.json
+
+
 
 
 # production
