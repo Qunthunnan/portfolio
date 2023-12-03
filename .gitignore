@@ -11,6 +11,7 @@ mailer
 users.json
 
 wordpress/mailer
+pulse/mailer
 
 
 # production
