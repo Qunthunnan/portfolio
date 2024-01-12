@@ -1,3 +1,9 @@
+import jQuery from "jquery";
+import validate from 'jquery-validation';
+window.$ = window.jQuery = jQuery;
+
+
+
 // promo menu
 const menu = document.querySelector('.promo__menu-overlay'),
 menuBlock = document.querySelector('.promo__menu-block'),
@@ -51,11 +57,11 @@ $(document).ready(function() {
         });
     }
 
-    scroll($("a[href=#about-me]"));
-    scroll($("a[href=#exp-edu]"));
-    scroll($("a[href=#tools]"));
-    scroll($("a[href=#portfolio]"));
-    scroll($("a[href=#contacts]"));
+    scroll($("a[href='#about-me']"));
+    scroll($("a[href='#exp-edu']"));
+    scroll($("a[href='#tools']"));
+    scroll($("a[href='#portfolio']"));
+    scroll($("a[href='#contacts']"));
 });
 //validator
 function validateForm (form){

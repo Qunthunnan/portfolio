@@ -2,31 +2,52 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack/webpack.config.js",
+    "serv": "webpack serve --config webpack/webpack.config.js --open"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qunthunnan/portfolio.git"
+  },
+  "author": "Qunthunnan",
   "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.26.12",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-cli": "^2.3.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^5.0.0",
-    "sass": "^1.35.1"
+  "bugs": {
+    "url": "https://github.com/Qunthunnan/portfolio/issues"
   },
-  "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
-  ],
+  "homepage": "https://github.com/Qunthunnan/portfolio#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.6",
+    "@babel/plugin-transform-runtime": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "babel-loader": "^9.1.3",
+    "babel-plugin-dynamic-import-webpack": "^1.1.0",
+    "core-js": "^3.34.0",
+    "css-loader": "^6.8.1",
+    "image-minimizer-webpack-plugin": "^3.8.3",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "postcss": "^8.4.32",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.3.0",
+    "pug-plugin": "^4.9.9",
+    "regenerator-runtime": "^0.14.1",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "webpack": "^5.89.0",
+    "webpack-bundle-analyzer": "^4.10.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
   "dependencies": {
-    "gulp-minify": "^3.1.0"
+    "@splidejs/splide": "^4.1.4",
+    "jquery": "^3.7.1",
+    "jquery-validation": "^1.20.0"
   }
 }

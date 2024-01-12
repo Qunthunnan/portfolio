@@ -1,26 +1,21 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
 
-# testing
-/coverage
-
 #backend
-mailer
+src/mailer
+
+src/wordpress/mailer
+src/pulse/mailer
 users.json
 
-wordpress/mailer
-wordpress/users.json
-pulse/mailer
-pulse/mailer/users.json
+
 
 
 
 
 # production
-/build
-
+/dist
 # misc
 .DS_Store
 .env.local
