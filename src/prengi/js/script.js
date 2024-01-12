@@ -1,4 +1,7 @@
-// "use strict";
+"use strict";
+import Splide from '@splidejs/splide';
+import intlTelInput from 'intl-tel-input';
+import parsePhoneNumber from 'libphonenumber-js'
 
 function phoneSmallEditing(phone) {
 	const availableChars = ['0','1','2','3','4','5','6','7','8','9','(',')','+'];
@@ -31,7 +34,7 @@ function headerNormalPhoneAdaptation (headerPhonesElements, headerPhones) {
 
 function formatPhoneNumber(phoneNumber) {
 	try {
-		const parsedNumber = libphonenumber.parsePhoneNumber(iti.getNumber());
+		const parsedNumber = parsePhoneNumber(iti.getNumber());
 		const formattedNumber = parsedNumber.formatInternational();
 		return formattedNumber;
 	} catch (error) {
@@ -139,7 +142,7 @@ function inputValidation(input) {
 
 	if(input.name === 'phone') {
 		try {
-			if(libphonenumber.parsePhoneNumber(input.value).isValid()) {
+			if(parsePhoneNumber(input.value).isValid()) {
 				deleteError(input);
 				return true;
 			} else {
@@ -198,22 +201,24 @@ const smallDisplay = window.matchMedia('(max-width: 991px)'),
 	  normalDisplay = window.matchMedia('(min-width: 992px)'),
 	  mainSlider = new Splide( '.splide[aria-label="mainSlider"]', {
 		drag: true,
-		useIndex: true
+		useIndex: true,
+		height: 700,
+		cover: true,
 	  }),
 	  mobileHeaderButton = document.querySelector('.header__mobile-button'),
-	  sliderContainer = document.querySelector('.main__slider-container');
+	  sliderContainer = document.querySelector('.main__slider-container'),
 	  productsSlider = new Splide('.splide[aria-label="productsSlider"]'),
       productsButtons = ['Prengi Production', 'Prengi FMC', 'Prengi Mallz', 'Retail Prengi', 'Logistic Prengi', 'IT Prengi HR'],
 	  modal = document.querySelector('.modal'),
 	  modalOverlay = document.querySelector('.modal__overlay'),
 	  singUpBtns = document.querySelectorAll('.button_singUp'),
 	  modalCloseBtn = modal.querySelectorAll('.modal__window-close'),
-	  nameInput = modal.querySelector('.modal__form-name input');
+	  nameInput = modal.querySelector('.modal__form-name input'),
 	  phoneInput = document.querySelector('.modal__form-phone input'),
 	  modalSubmitBtn = document.querySelector('.modal__form-submit'),
 	  policyChbox = modal.querySelector('.modal__form-policy input');
 
-let iti = window.intlTelInput(phoneInput, {
+let iti = intlTelInput(phoneInput, {
 		utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/utils.js',
 		initialCountry: 'auto',
 		excludeCountries: ['ru', 'kp', 'ir', 'sy'],
@@ -252,7 +257,7 @@ modalSubmitBtn.addEventListener('click', (e)=>{
 	if(nameValidationResult && phoneValidationResult && policyValidationResult) {
 		const userData = {
 			userFirstName: nameInput.value,
-			userPhone: libphonenumber.parsePhoneNumber(phoneInput.value).number
+			userPhone: parsePhoneNumber(phoneInput.value).number
 		}
 
 		users.push(userData);

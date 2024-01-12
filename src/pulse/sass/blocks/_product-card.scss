@@ -42,7 +42,8 @@
         color: #0d0d0d;
     }
 
-    &__more, &__more:link, &__more:visited, &__back, &__back:link, &__back:visited {
+    &__more, &__back {
+        cursor: pointer;
         position: absolute;
         top: 318px;
         left: 50%;

@@ -12,7 +12,7 @@ module.exports = function webpackBuild() {
         'none/index': './src/pug/none.pug',
         'policy/index': './src/pug/policy.pug',
         'prengi/index': './src/prengi/index.pug',
-        'prengi/empty': './src/prengi/pug/empty.pug',
+        'prengi/empty/index': './src/prengi/pug/empty.pug',
         'pulse/index': './src/pulse/index.pug',
         'uber/index': './src/uber/index.pug',
         'wordpress/index': './src/wordpress/index.pug',

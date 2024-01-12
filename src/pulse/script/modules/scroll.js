@@ -1,4 +1,8 @@
-$(document).ready(function() {
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
+import {WOW} from 'wowjs';
+
+export const scroll = function () {
     new WOW().init();
     $(window).scroll(function() {
         if ($(this).scrollTop() > 1600) {
@@ -33,5 +37,4 @@ $(document).ready(function() {
     });
     
     observer.observe(advantagesSect);
-});
-
+}

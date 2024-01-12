@@ -1,5 +1,8 @@
-$(document).ready(function(){
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
+import validate from 'jquery-validation';
 
+export const validator = function () {
     // console.log("TEST1");
     function validateForm (form){
         // console.log("TEST2");
@@ -55,4 +58,5 @@ $(document).ready(function(){
 
         return false;
     });
-});
+}
+
