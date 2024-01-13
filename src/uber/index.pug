@@ -4,15 +4,15 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     title Uber
-    link(rel='apple-touch-icon' sizes='180x180' href='img/favicon/apple-touch-icon.png')
-    link(rel='icon' type='image/png' sizes='32x32' href='img/favicon/favicon-32x32.png')
-    link(rel='icon' type='image/png' sizes='16x16' href='img/favicon/favicon-16x16.png')
-    link(rel='manifest' href='img/favicon/site.webmanifest')
-    link(rel='mask-icon' href='img/favicon/safari-pinned-tab.svg' color='#5bbad5')
+    link(rel='apple-touch-icon' sizes='180x180' href=require('img/favicon/apple-touch-icon.png'))
+    link(rel='icon' type='image/png' sizes='32x32' href=require('img/favicon/favicon-32x32.png'))
+    link(rel='icon' type='image/png' sizes='16x16' href=require('img/favicon/favicon-16x16.png'))
+    link(rel='manifest' href=require('img/favicon/site.webmanifest'))
+    link(rel='mask-icon' href=require('img/favicon/safari-pinned-tab.svg') color='#5bbad5')
     meta(name='msapplication-TileColor' content='#2b5797')
     meta(name='theme-color' content='#727272')
-    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css')
-    link(rel='stylesheet' href='css/style.min.css')
+
+    link(rel='stylesheet' href=require('sass/style.sass'))
   body
     header#header
       .test
@@ -39,7 +39,7 @@ html(lang='en')
         .container
           .row
             .col-lg-4.offset-lg-1.col-sm-4.col-6
-              img.logo(src='img/logo/uber_logoUa.png' alt='uber_logo')
+              img.logo(src=require('img/logo/uber_logoUa.png') alt='uber_logo')
               .logo_text Офіційний партнер Uber в Україні
             .mobile_hide.col-lg-2.offset-lg-2.col-sm-3.offset-sm-2.col-0.offset-0
               .call_text Телефонуйте нам
@@ -86,7 +86,7 @@ html(lang='en')
           .col-sm-6.col-12
             .reason_wrap
               .circle
-                img.reason_icon(src='img/icons/reason_1.png' alt='')
+                img.reason_icon(src=require('img/icons/reason_1.png') alt='')
               .reason_text_wrap
                 .reason_title Жодної готівки, оплата відбувається автоматично
                 .reason_descr
@@ -94,7 +94,7 @@ html(lang='en')
           .col-sm-6.col-12
             .reason_wrap
               .circle
-                img.reason_icon(src='img/icons/reason_2.png' alt='')
+                img.reason_icon(src=require('img/icons/reason_2.png') alt='')
               .reason_text_wrap
                 .reason_title Комісія 8% + БОНУСИ
                 .reason_descr
@@ -102,7 +102,7 @@ html(lang='en')
           .col-sm-6.col-12
             .reason_wrap
               .circle
-                img.reason_icon(src='img/icons/reason_3.png' alt='')
+                img.reason_icon(src=require('img/icons/reason_3.png') alt='')
               .reason_text_wrap
                 .reason_title Високий дохід із гарантованими виплатами
                 .reason_descr
@@ -110,7 +110,7 @@ html(lang='en')
           .col-sm-6.col-12
             .reason_wrap
               .circle
-                img.reason_icon(src='img/icons/reason_4.png' alt='')
+                img.reason_icon(src=require('img/icons/reason_4.png') alt='')
               .reason_text_wrap
                 .reason_title Робота в зручний час, жодних графіків
                 .reason_descr
@@ -119,7 +119,7 @@ html(lang='en')
           .col-sm-6.col-12
             .reason_wrap
               .circle
-                img.reason_icon(src='img/icons/reason_5.png' alt='')
+                img.reason_icon(src=require('img/icons/reason_5.png') alt='')
               .reason_text_wrap
                 .reason_title Комфортне, прозоре та просте підключення
                 .reason_descr
@@ -127,7 +127,7 @@ html(lang='en')
           .col-sm-6.col-12
             .reason_wrap
               .circle
-                img.reason_icon(src='img/icons/reason_6.png' alt='')
+                img.reason_icon(src=require('img/icons/reason_6.png') alt='')
               .reason_text_wrap
                 .reason_title Завжди велика кількість замовлень
                 .reason_descr
@@ -135,7 +135,7 @@ html(lang='en')
           .col-sm-6.col-12
             .reason_wrap
               .circle
-                img.reason_icon(src='img/icons/reason_7.png' alt='')
+                img.reason_icon(src=require('img/icons/reason_7.png') alt='')
               .reason_text_wrap
                 .reason_title Цілодобова підтримка
                 .reason_descr
@@ -143,7 +143,7 @@ html(lang='en')
           .col-sm-6.col-12
             .reason_wrap
               .circle
-                img.reason_icon(src='img/icons/reason_8.png' alt='')
+                img.reason_icon(src=require('img/icons/reason_8.png') alt='')
               .reason_text_wrap
                 .reason_title Без шашечок та наклейок
                 .reason_descr
@@ -187,7 +187,7 @@ html(lang='en')
           .label Можливості
           .title Вибір - чудова штука!
           .sub_title Замовте автомобіль, який підходить вам за стилем та бюджетом
-          img.auto(src='img/png_img/autoUa.png' alt='')
+          img.auto(src=require('img/png_img/autoUa.png') alt='')
           .mobile_show_text
             | Машини щодня.
             | Краще, швидше та дешевше, ніж таксі
@@ -284,7 +284,4 @@ html(lang='en')
             a.app_store(target='_blank' href='https://apps.apple.com/us/app/uber-request-a-ride/id368677368')
             a.google_play(target='_blank' href='https://play.google.com/store/apps/details?id=com.ubercab')
             a.windows_store(target='_blank' href='https://www.microsoft.com/store/productid/9WZDNCRFHXRD?ocid=pdpshare')
-    script(defer='' src='https://code.jquery.com/jquery-1.11.1.js')
-    script(defer='' src='https://cdn.jsdelivr.net/npm/libphonenumber-js@1.10.49/bundle/libphonenumber-max.js')
-    script(defer='' src='https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/intlTelInput.min.js')
-    script(defer='' src='js/script-min.js')
+    script(defer='' src=require('js/script.js'))

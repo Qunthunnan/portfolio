@@ -1,8 +1,14 @@
-window.addEventListener('DOMContentLoaded', () => {
+import intlTelInput from 'intl-tel-input';
+import parsePhoneNumber from 'libphonenumber-js';
+import jQuery from 'jquery';
+window.$ = window.jQuery = jQuery;
+
+
+
 
     function formatPhoneNumber(phoneNumber) {
         try {
-            const parsedNumber = libphonenumber.parsePhoneNumber(iti.getNumber());
+            const parsedNumber = parsePhoneNumber(iti.getNumber());
             const formattedNumber = parsedNumber.formatInternational();
             return formattedNumber;
         } catch (error) {
@@ -106,7 +112,7 @@ window.addEventListener('DOMContentLoaded', () => {
     
         if(input.name === 'phone') {
             try {
-                if(libphonenumber.parsePhoneNumber(input.value).isValid()) {
+                if(parsePhoneNumber(input.value).isValid()) {
                     deleteError(input);
                     return true;
                 } else {
@@ -161,7 +167,7 @@ window.addEventListener('DOMContentLoaded', () => {
           phoneInput = document.querySelector('#phone-input'),
           nameInput = document.querySelector('#name-input');
 
-    let iti = window.intlTelInput(phoneInput, {
+    let iti = intlTelInput(phoneInput, {
     initialCountry: 'auto',
     excludeCountries: ['ru', 'kp', 'ir', 'sy'],
     utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/utils.js',
@@ -196,7 +202,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if(nameValidationResult && phoneValidationResult) {
                 const userData = {
                     userFirstName: nameInput.value,
-                    userPhone: libphonenumber.parsePhoneNumber(phoneInput.value).number
+                    userPhone: parsePhoneNumber(phoneInput.value).number
                 }
                 users.push(userData);
                 console.dir(users);
@@ -249,8 +255,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    scroll($("a[href=#main]"));
-    scroll($("a[href=#reasons]"));
-    scroll($("a[href=#terms]"));
-    scroll($("a[href=#footer]"));
-});
+    scroll($("a[href='#main']"));
+    scroll($("a[href='#reasons']"));
+    scroll($("a[href='#terms']"));
+    scroll($("a[href='#footer']"));

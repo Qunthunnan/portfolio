@@ -4,14 +4,12 @@ html(lang='uk')
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title WordPress
-    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css')
-    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css')
-    link(rel='stylesheet' href='css/style.min.css')
-    link(rel='apple-touch-icon' sizes='76x76' href='icons/favicon/apple-touch-icon.png')
-    link(rel='icon' type='image/png' sizes='32x32' href='icons/favicon/favicon-32x32.png')
-    link(rel='icon' type='image/png' sizes='16x16' href='icons/favicon/favicon-16x16.png')
-    link(rel='manifest' href='icons/favicon/site.webmanifest')
-    link(rel='mask-icon' href='icons/favicon/' color='#5bbad5')
+    link(rel='stylesheet' href=require('sass/style.scss'))
+    link(rel='apple-touch-icon' sizes='76x76' href=require('icons/favicon/apple-touch-icon.png'))
+    link(rel='icon' type='image/png' sizes='32x32' href=require('icons/favicon/favicon-32x32.png'))
+    link(rel='icon' type='image/png' sizes='16x16' href=require('icons/favicon/favicon-16x16.png'))
+    link(rel='manifest' href=require('icons/favicon/site.webmanifest'))
+    link(rel='mask-icon' href=require('icons/favicon/safari-pinned-tab.svg') color='#5bbad5')
     meta(name='msapplication-TileColor' content='#da532c')
     meta(name='theme-color' content='#ffffff')
   body
@@ -46,7 +44,7 @@ html(lang='uk')
             input#policy(name='policy' required='' type='checkbox')
             label(for='policy')
               | Я згоден(на) з 
-              a(target='_blank' href='policy.html') політикою конфіденційності
+              a(target='_blank' href='../policy') політикою конфіденційності
       .window-manager__window.window-manager__window_booked
         .window-manager__window__close.window-manager__window-close_booked
           span.icon-mac_close_btn
@@ -71,7 +69,7 @@ html(lang='uk')
     section.main
       .container
         .logo
-          img.logo-icon(src='icons/main/owl.png' alt='logo')
+          img.logo-icon(src=require('icons/main/owl.png') alt='logo')
           .logo-text WordPress інтенсив
         h1.title-text Створити свій сайт на WordPress
         h2.title-big-text це просто!
@@ -84,7 +82,7 @@ html(lang='uk')
         button.book-btn Записатись на інтенсив!
         .learn-more-text дізнатися більше про інтенсив
         a(href='#waiting')
-          img.arrow(src='icons/main/down.png' alt='')
+          img.arrow(src=require('icons/main/down.png') alt='')
     section#waiting.waiting
       .container
         h2.waiting-title Що вас чекає у нашому інтенсиві?
@@ -92,23 +90,23 @@ html(lang='uk')
         .promo-text 2 безкоштовних повноцінних навчальних вебінарів, де:
         .waiting-wrapper
           .waiting-block
-            img.waiting-laptop(src='img/waiting/waiting1.png' alt='lapto')
+            img.waiting-laptop(src=require('img/waiting/waiting1.png') alt='lapto')
             .descr-text
               | Всього за два безкоштовні вебінари ми навчимо вас, як створити свій сайт на WordPress.
           .waiting-block
-            img.waiting-laptop(src='img/waiting/waiting_2.png' alt='laptop')
+            img.waiting-laptop(src=require('img/waiting/waiting_2.png') alt='laptop')
             .descr-text
               | Покажемо, як правильно оптимізувати сайт та зробити його привабливим для пошукових систем. Тільки свіжа, професійна та
               | актуальна інформація!
           .waiting-block
-            img.waiting-laptop(src='img/waiting/waiting_3.png' alt='laptop')
+            img.waiting-laptop(src=require('img/waiting/waiting_3.png') alt='laptop')
             .descr-text
               | Ви дізнаєтеся, що таке «хороша індексація»,
               | «висока відвідуваність», «стабільний приріст відвідувачів», «ТОП за запитами» і, що набагато важливіше, як досягти всіх цих показників!
     section.optimisation
       .container
         h2.optimisation-title Що таке оптимізація та навіщо вона потрібна?
-        img.optimisation-mobile(src='img/optimisation/woman_bg.jpg' alt='')
+        img.optimisation-mobile(src=require('img/optimisation/woman_bg.jpg') alt='')
         .optimisation-text
           | На просторах інтернету незліченна кількість діючих і навіть занедбаних сайтів. Більшість із них збігаються не лише за категоріями, а й за змістом.
           br
@@ -128,33 +126,33 @@ html(lang='uk')
         .finish-wrapper
           .finish-item
             .finish-circle
-              img.item-img(src='icons/finish/finish_icon_1.png' alt='')
+              img.item-img(src=require('icons/finish/finish_icon_1.png') alt='')
             .item-text Створити свій сайт чи блог
           .finish-item
             .finish-circle
-              img.item-img(src='icons/finish/finish_icon_2.png' alt='')
+              img.item-img(src=require('icons/finish/finish_icon_2.png') alt='')
             .item-text Правильно його оптимізувати
           .finish-item
             .finish-circle
-              img.item-img(src='icons/finish/finish_icon_3.png' alt='')
+              img.item-img(src=require('icons/finish/finish_icon_3.png') alt='')
             .item-text Забезпечити йому повільний, але впевнений зріст у ТОП
           .finish-item
             .finish-circle
-              img.item-img(src='icons/finish/finish_icon_4.png' alt='')
+              img.item-img(src=require('icons/finish/finish_icon_4.png') alt='')
             .item-text Досягти стабільного приросту відвідувачів
           .finish-item
             .finish-circle
-              img.item-img(src='icons/finish/finish_icon_5.png' alt='')
+              img.item-img(src=require('icons/finish/finish_icon_5.png') alt='')
             .item-text Отримувати відчутний прибуток
     section.booking
       .container
-        img.gift-img(src='icons/booking/gift.png' alt='')
+        img.gift-img(src=require('icons/booking/gift.png') alt='')
         .booking-text
           | Для всіх учасників інтенсиву передбачені бонуси та подарунки. Натискайте на кнопку нижче, беріть участь у вебінарах та забирайте свій приз після закінчення навчання!
         button.book-btn Записатись на інтенсив!
     section.first-webinar
       .container
-        img.first-img(src='img/first-webinar/first_web_laptop.png' alt='')
+        img.first-img(src=require('img/first-webinar/first_web_laptop.png') alt='')
         h3.first-web-title Перший вебінар відбудеться:
         h2.first-web-time 10 вересня о 20:00 за київським часом
         .first-text Встигніть записатися, кількість місць обмежена!
@@ -163,10 +161,8 @@ html(lang='uk')
         .footer-links
           a(target='_blank' href='https://t.me/Qunthunnan0') Служба підтримки
           | |
-          a(target='_blank' href='policy.html') Політика конфіденційності
+          a(target='_blank' href='../policy') Політика конфіденційності
         .footer-tel
           | Зателефонуйте нам:
           a(href='tel:08005550121') 0800-555-01-21
-    script(src='https://npmcdn.com/flatpickr/dist/flatpickr.min.js')
-    script(src='https://npmcdn.com/flatpickr/dist/l10n/uk.js')
-    script(src='js/script-min.js')
+    script(src=require('js/script.js'))

@@ -5,8 +5,9 @@
   "main": "js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack/webpack.config.js",
-    "serv": "webpack serve --config webpack/webpack.config.js --open"
+    "build": "webpack --config webpack/webpack.config.dev.js",
+    "prod": "webpack --config webpack/webpack.config.prod.js",
+    "serv": "webpack serve --config webpack/webpack.config.dev.js --open"
   },
   "repository": {
     "type": "git",
@@ -43,17 +44,19 @@
     "webpack": "^5.89.0",
     "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.10.0"
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "animate.css": "^4.1.1",
-    "grunt": "^1.6.1",
+    "flatpickr": "^4.6.13",
     "intl-tel-input": "^18.3.4",
     "jquery": "^3.7.1",
     "jquery-validation": "^1.20.0",
     "jquery.maskedinput": "^1.4.1",
     "libphonenumber-js": "^1.10.53",
+    "normalize.css": "^8.0.1",
     "tiny-slider": "^2.9.4",
     "wowjs": "^1.1.3"
   }

@@ -1,6 +1,8 @@
+const path = require('path');
 module.exports = function babel() {
     return {
         test: /\.m?js$/,
+        include: path.resolve(__dirname, 'src'),
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",

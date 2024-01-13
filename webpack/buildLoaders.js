@@ -3,19 +3,6 @@ const PugPlugin = require('pug-plugin');
 
 module.exports = function loaders () {
     return [
-          // {
-          //   test: /\.s[ac]ss$/i,
-          //   use: [ 
-          //   MiniCssExtractPlugin.loader, 
-          //   "css-loader",
-          //   "postcss-loader",
-          //   "sass-loader", 
-          // ],
-          // },
-          // {
-          //   test: /\.(html)$/,
-          //   use: ['html-loader'],
-          // },
           {
             test: /\.pug$/,
             loader: PugPlugin.loader, // PugPlugin already contain the pug-loader
