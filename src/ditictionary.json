@@ -112,83 +112,111 @@
         "en": "take a look"
     },
     "exp-edu__info-text-OwnProjects": {
-        "uk": "Написав кілька невеличких проєктів-сторінок, які можуть продемонструвати мої навички. Опис кожного проєкту можете подивитись на моєму",
+        "uk": "Написав кілька невеличких проєктів-сторінок, які можуть продемонструвати мої навички. Опис кожного проєкту можете подивитись на моєму ",
         "en": "I wrote a few small project pages that can demonstrate my skills. You can see the description of each project on my"
     },
     "uptitle_tools": {
         "uk": "Навички",
-        "en": ""
+        "en": "Skills"
     },
     "title_tools": {
         "uk": "Що я використовую у роботі",
-        "en": ""
+        "en": "What I use at work"
     },
     "tools__text-Html5": {
         "uk": "Саме він створює каркас вашого сайту, а п'ята версія дозволить мені створювати більш SEO-оптимізовану структуру вашого продукту",
-        "en": ""
+        "en": "It is he who creates the framework of your site, and the fifth version will allow me to create a more SEO-optimized structure of your product"
     },
     "tools__text-Css3": {
         "uk": "Ця мова стилів дозволяє мені створювати будь-який зовнішній вигляд вашого сайту або програми",
-        "en": ""
+        "en": "This stylesheet allows me to create any appearance of your site or application"
     },
     "tools__text-Js": {
         "uk": "Ця мова програмування дозволяє оживити все, що завгодно: слайдери, вікна, підказки, вкладки, отримання даних від сервера та багато іншого",
-        "en": ""
+        "en": "This programming language allows you to bring anything to life: sliders, windows, tooltips, tabs, getting data from the server and much more"
     },
     "tools__text-Jquery": {
-        "uk": "Вже трохи застаріла технологія, але все ще використовується у великої кількості проєктів. В мене деякі сторінки використовують jquery.",
-        "en": ""
+        "uk": "Вже трохи застаріла технологія, але все ще використовується у великої кількості проєктів. В мене деякі сторінки використовують jquery",
+        "en": "Already a little outdated technology, but still used in a large number of projects. Some of my pages use jquery"
+    },
+    "tools__text-Tools": {
+        "uk": "Ці інструменти дозволять мені ефективніше налаштувати робочий простір та працювати над вашими задачами",
+        "en": "These tools will allow me to more efficiently set up my workspace and work on your tasks"
     },
     "uptitle_portfolio": {
         "uk": "Портфоліо",
-        "en": ""
+        "en": "Portfolio"
     },
     "title_portfolio": {
         "uk": "Мої роботи",
-        "en": ""
+        "en": "My works"
     },
     "uptitle_contacts": {
         "uk": "Контакти",
-        "en": ""
+        "en": "Contacts"
     },
     "title_contacts": {
         "uk": "Зв'яжіться зі мною",
-        "en": ""
+        "en": "Contact me"
     },
     "contacts__descr": {
         "uk": "Будь яким зручним для вас способом",
-        "en": ""
+        "en": "Any way convenient for you"
     },
     "contacts__descr-CallYou": {
         "uk": "Або залиште свої данні, я з вами зв’яжусь",
-        "en": ""
+        "en": "Or leave your details and I will contact you"
     },
     "labelName": {
         "uk": "Ваше ім'я",
-        "en": ""
+        "en": "Your name"
     },
     "labelEmail": {
         "uk": "Ваша пошта",
-        "en": ""
+        "en": "Your Email"
     },
     "labelMessage": {
         "uk": "Ваше повідомлення",
-        "en": ""
+        "en": "Your message"
     },
     "button_contacts": {
         "uk": "Відправити лист",
-        "en": ""
+        "en": "Send a letter"
     },
     "labelAgree": {
-        "uk": "Я згоден(на) з",
-        "en": ""
+        "uk": "Я згоден(на) з ",
+        "en": "I agree with "
+    },
+    "policyLink": {
+        "uk": "політикою конфіденційності",
+        "en": "the privacy policy"
     },
     "contacts__mail-sending": {
         "uk": "Відправляю ваше повідомлення...",
-        "en": ""
+        "en": "Sending your message..."
     },
     "contacts__mail-sended": {
         "uk": "Повідомлення відправлено!",
-        "en": ""
+        "en": "Message sent!"
+    },
+    "messagesName": {
+        "uk": "Введіть, будь ласка, своє ім'я",
+        "en": "Please enter your name"
+    },
+    "messagesNameLength": {
+        "uk": "Мінімальна довжина імені: {0} символа",
+        "en": "Minimum name length: {0} characters"
+    },
+    "messagesEmail": {
+        "uk": "Введіть, будь ласка, свою електронну скриньку",
+        "en": "Please enter your email address"
+    },
+    "messagesEmailCorrect": {
+        "uk": "Перевірте, чи правильно ви написали пошту, повинен бути символ @",
+        "en": "Check if you wrote the mail correctly, there should be an @ symbol"
+    },
+    "messagesPolicy": {
+        "uk": "Необхідна ваша згода, щоби залишити повідомлення.",
+        "en": "Your consent is required to leave a message."
     }
 }

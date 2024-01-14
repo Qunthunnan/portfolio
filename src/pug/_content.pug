@@ -108,54 +108,44 @@ section#exp-edu.exp-edu
                                 path(d='M10.5 0.5C4.975 0.5 0.5 4.86167 0.5 10.2411C0.5 14.5457 3.365 18.1962 7.3375 19.4832C7.8375 19.5749 8.02083 19.2734 8.02083 19.0148C8.02083 18.7835 8.0125 18.1706 8.00833 17.3585C5.22667 17.9459 4.64 16.0517 4.64 16.0517C4.185 14.9274 3.5275 14.6267 3.5275 14.6267C2.62167 14.0228 3.5975 14.0352 3.5975 14.0352C4.60167 14.103 5.12917 15.0389 5.12917 15.0389C6.02083 16.5283 7.47 16.0979 8.04167 15.8493C8.13167 15.219 8.38917 14.7903 8.675 14.5466C6.45417 14.3029 4.12 13.4652 4.12 9.73304C4.12 8.66988 4.5075 7.80085 5.14917 7.11934C5.03667 6.87317 4.69917 5.8827 5.23667 4.54116C5.23667 4.54116 6.07417 4.28012 7.98667 5.53988C8.78667 5.32345 9.63667 5.21606 10.4867 5.2111C11.3367 5.21606 12.1867 5.32345 12.9867 5.53988C14.8867 4.28012 15.7242 4.54116 15.7242 4.54116C16.2617 5.8827 15.9242 6.87317 15.8242 7.11934C16.4617 7.80085 16.8492 8.66988 16.8492 9.73304C16.8492 13.4752 14.5117 14.2987 12.2867 14.5383C12.6367 14.8307 12.9617 15.428 12.9617 16.3408C12.9617 17.6444 12.9492 18.6918 12.9492 19.0082C12.9492 19.2635 13.1242 19.5683 13.6367 19.4708C17.6375 18.192 20.5 14.5391 20.5 10.2411C20.5 4.86167 16.0225 0.5 10.5 0.5Z' fill='black')
 section#tools.tools
     .container
-        h3.uptitle.uptitle_tools Навички
-        h2.title.title_tools Що я використовую у роботі
+        h3.uptitle.uptitle_tools= ditictionary['uptitle_tools'][`${lang}`]
+        h2.title.title_tools= ditictionary['title_tools'][`${lang}`]
         .tools__wrapper
             .tools__tool
                 .tools__tool-img
                     img(src=require('@/icons/skills/html5.svg') alt='html')
                 h4.tools__tool-title HTML5
-                .tools__text
-                    | Саме він створює каркас вашого сайту, а п'ята версія дозволить мені створювати більш SEO-оптимізовану структуру вашого продукту
+                .tools__text= ditictionary['tools__text-Html5'][`${lang}`]
             .tools__tool
                 .tools__tool-img
                     img(src=require('@/icons/skills/css3.svg') alt='css3')
                 h4.tools__tool-title CSS3
-                .tools__text
-                    | Ця мова стилів дозволяє мені створювати будь-який зовнішній вигляд вашого сайту або програми
+                .tools__text= ditictionary['tools__text-Css3'][`${lang}`]
             .tools__tool
                 .tools__tool-img
                     img(src=require('@/icons/skills/js.svg') alt='js')
                 h4.tools__tool-title Java Script
-                .tools__text
-                    | Ця мова програмування дозволяє оживити все, що завгодно: слайдери, вікна, підказки, вкладки, отримання даних від сервера та багато іншого
+                .tools__text= ditictionary['tools__text-Js'][`${lang}`]
             .tools__tool
                 .tools__tool-img
                     img(src=require('@/icons/skills/jquery.svg') alt='jquery')
                 h4.tools__tool-title Jquery
-                .tools__text
-                    | Вже трохи застаріла технологія, але все ще використовується у великої кількості проєктів. В мене деякі сторінки використовують jquery.
-            //
-                <div class="tools__tool">
-                <div class="tools__tool-img">
-                <img src="icons/skills/react.svg" alt="react">
-                </div>
-                <h4 class="tools__tool-title">React</h4>
-                <div class="tools__text">Ця бібліотека дозволяє створювати веб-додатки. Ми можемо створити максимально інтерактивний продукт саме під ваші цілі</div>
-                </div>
+                .tools__text= ditictionary['tools__text-Jquery'][`${lang}`]
             .tools__tool
                 .tools__tool-img.tools__tool-img-multi
-                    img(src=require('@/icons/skills/gulp-logo.svg') alt='nodejs')
+                    svg(viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg').tools__webpack
+                        path(d='m300 .1 265 149.9v299.9l-265 149.9-265-149.9v-299.9z' fill='#fff')
+                        path(d='m517.7 439.5-208.9 118.3v-92l130.2-71.7zm14.3-12.9v-247.2l-76.4 44.1v159zm-450.5 12.9 208.9 118.2v-92l-130.2-71.6zm-14.3-12.9v-247.2l76.4 44.1v159zm8.9-263.2 214.3-121.2v89l-137.3 75.5-1.1.6zm446.9 0-214.2-121.2v89l137.2 75.6 1.1.6z' fill='#8ed6fb')
+                        path(d='m290.4 444.8-128.4-70.7v-139.9l128.4 74.1zm18.4 0 128.4-70.6v-140l-128.4 74.1zm-138.2-226.8 129-70.9 128.9 70.9-128.9 74.4z' fill='#1c78c0')
                     img(src=require('@/icons/skills/git-logo.png') alt='nodejs')
                     svg(viewBox='0 0 780 250')
                         path(fill='#231F20' d='M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z')
-                h4.tools__tool-title Gulp, Git, npm
-                .tools__text
-                    | Ці технології дозволять мені ефективніше налаштувати робочий простір та працювати над вашими задачами
+                h4.tools__tool-title Gulp, Git, Webpack, npm
+                .tools__text= ditictionary['tools__text-Tools'][`${lang}`]
 section#portfolio.portfolio
     .container
-        h3.uptitle.uptitle_portfolio Портфоліо
-        h2.title.title_portfolio Мої роботи
+        h3.uptitle.uptitle_portfolio= ditictionary['uptitle_portfolio'][`${lang}`]
+        h2.title.title_portfolio= ditictionary['title_portfolio'][`${lang}`]
         .portfolio__wrapper
             a.portfolio__item.portfolio__item-prengi(target='_blank' href='prengi/')
                 img(src=require('@/img/works/prengi.jpg') alt='prengi')
@@ -185,9 +175,9 @@ section#contacts.contacts
             .contacts__my-photo
                 img(src=require('@/img/my-photo.jpg') alt='my-photo')
             .contacts__content
-                h3.uptitle.uptitle_contacts Контакти
-                h2.title.title_contacts Зв'яжіться зі мною
-                .contacts__descr Будь яким зручним для вас способом
+                h3.uptitle.uptitle_contacts= ditictionary['uptitle_contacts'][`${lang}`]
+                h2.title.title_contacts= ditictionary['title_contacts'][`${lang}`]
+                .contacts__descr= ditictionary['contacts__descr'][`${lang}`]
                 .contacts__socials
                     a(target='_blank' href='https://www.facebook.com/kirylo.bashkan')
                         svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
@@ -195,22 +185,21 @@ section#contacts.contacts
                     a(target='_blank' href='https://t.me/Qunthunnan0')
                         svg(width='20' height='20' viewBox='0 0 30 30' fill='' xmlns='http://www.w3.org/2000/svg')
                             path(d='M15 30C23.2863 30 30 23.2863 30 15C30 6.71375 23.2863 0 15 0C6.71375 0 0 6.71375 0 15C0 23.2863 6.71375 30 15 30ZM6.86375 14.675L21.3263 9.09875C21.9975 8.85625 22.5837 9.2625 22.3662 10.2775L22.3675 10.2762L19.905 21.8775C19.7225 22.7 19.2337 22.9 18.55 22.5125L14.8 19.7487L12.9912 21.4913C12.7912 21.6913 12.6225 21.86 12.235 21.86L12.5013 18.0438L19.4513 11.765C19.7537 11.4987 19.3837 11.3488 18.985 11.6138L10.3963 17.0212L6.69375 15.8663C5.89 15.6112 5.8725 15.0625 6.86375 14.675Z' fill='white')
-                .contacts__descr Або залиште свої данні, я з вами зв’яжусь
+                .contacts__descr= ditictionary['contacts__descr-CallYou'][`${lang}`]
                 form.contacts__form(action='#')
                     .contacts__name-input
-                        input(required='' name='name' type='text')
-                        label Ваше ім'я
+                        input(name='name' type='text')
+                        label= ditictionary['labelName'][`${lang}`]
                     .contacts__email-input
-                        input(required='' name='email' type='email')
-                        label Ваша пошта
+                        input(name='email' type='email')
+                        label= ditictionary['labelEmail'][`${lang}`]
                     .contacts__message
                         textarea(name='message')
-                        label Ваше повідомлення
-                    button.button.button_contacts Відправити лист
+                        label= ditictionary['labelMessage'][`${lang}`]
+                    button.button.button_contacts= ditictionary['button_contacts'][`${lang}`]
                     .contacts__policy
-                        input(required='' name='policy' type='checkbox')
-                        label
-                            | Я згоден(на) з 
-                            a(target='_blank' href='policy/') політикою конфіденційності
-                .contacts__mail-sending Відправляю ваше повідомлення...
-                .contacts__mail-sended Повідомлення відправлено!
+                        input(name='policy' type='checkbox')
+                        label= ditictionary['labelAgree'][`${lang}`]
+                            a(target='_blank' href='policy/')= ditictionary['policyLink'][`${lang}`]
+                .contacts__mail-sending= ditictionary['contacts__mail-sending'][`${lang}`]
+                .contacts__mail-sended= ditictionary['contacts__mail-sended'][`${lang}`]

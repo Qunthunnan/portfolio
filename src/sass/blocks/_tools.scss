@@ -29,9 +29,6 @@
             justify-content: space-between;
             img, svg {
                 width: 60px;
-                &:first-child {
-                    width: unset;
-                }
             }
         }
     }
