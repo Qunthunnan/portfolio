@@ -1,0 +1,194 @@
+{
+    "socials_text": {
+        "uk": "Соціальні мережі:",
+        "en": "Socials:"
+    },
+    "uptitle_promo": {
+        "uk": "Мене звати Кирило Башкан",
+        "en": "My name is Kyrylo Bashkan"
+    },
+    "title_promo": {
+        "uk": "Я web-розробник",
+        "en": "I am a web developer"
+    },
+    "#portfolio": {
+        "uk": "Портфоліо",
+        "en": "Portfolio"
+    },
+    "#about-me": {
+        "uk": "Про мене",
+        "en": "About me"
+    },
+    "#exp-edu": {
+        "uk": "Мій досвід",
+        "en": "My experience"
+    },
+    "#tools": {
+        "uk": "Мої навички",
+        "en": "My skills"
+    },
+    "myWorks": {
+        "uk": "Мої роботи",
+        "en": "My works"
+    },
+    "#contacts": {
+        "uk": "Контакти",
+        "en": "Contacts"
+    },
+    "title_about-me": {
+        "uk": "Мене звати Кирило",
+        "en": "My name is Kyrylo"
+    },
+    "about-me__text": {
+        "uk": "Шукаю чудовий колектив у вашій компанії на посаді Web-розробника. Наразі маю навчальний досвід роботи над власними проєктами. Цікавлюсь іграми, історією, комп'ютерними технологіями. Стресостійкий та комунікабельний, маю досвід розв'язання різних проблем у комп'ютерній сфері. Доволі посидючий - здатен приділяти багато часу та уваги роботі та саморозвитку.",
+        "en": "I am looking for a great team in your company as a Web developer. Currently, I have educational experience working on my own projects. I am interested in games, history, computer technologies. Stress-resistant and communicative, I have experience in solving various problems in the computer field. Quite sedentary - able to devote a lot of time and attention to work and self-development."
+    },
+    "web": {
+        "uk": "Web-розробка",
+        "en": "Web development"
+    },
+    "webSkill": {
+        "uk": "Можу писати адаптивні та сучасні сайти на HTML CSS JS, використовуючи актуальні бібліотеки.",
+        "en": "I can write adaptive and modern sites in HTML CSS JS, using up-to-date libraries."
+    },
+    "servAdmin": {
+        "uk": "Адміністрування серверу",
+        "en": "Server administration"
+    },
+    "servAdminSkill": {
+        "uk": "Є базові знання з адміністрування linux та налаштуванням сервера. Цей сайт був піднятий на орендованому VPS сервері, завдяки nginx і налаштований особисто мною.",
+        "en": "I have basic knowledge of linux administration and server configuration. This site was hosted on a rented VPS server, thanks to nginx and configured by me personally."
+    },
+    "cppChProgramming": {
+        "uk": "Програмування на C++ та C#",
+        "en": "Programming in C++ and C#"
+    },
+    "cppChProgrammingSkill": {
+        "uk": "Раніше я вивчав C++ та C#, тому маю базові знання з програмування на цих мовах. Звісно, це не мій основний профіль, але ці знання допомагають мені ефективніше розвиватись.",
+        "en": "I have previously studied C++ and C#, so I have a basic knowledge of programming in these languages. Of course, this is not my main profile, but this knowledge helps me develop more effectively."
+    },
+    "uptitle_exp-edu": {
+        "uk": "Досвід",
+        "en": "Experience"
+    },
+    "title_exp-edu": {
+        "uk": "Мій загальний досвід та освіта",
+        "en": "My general experience and education"
+    },
+    "exp-edu__subtitle": {
+        "uk": "Освіта",
+        "en": "Education"
+    },
+    "exp-edu__info-title-Academy": {
+        "uk": "Комп'ютерна академія IT Step",
+        "en": "IT Step Computer Academy"
+    },
+    "exp-edu__info-subtitle-Academy": {
+        "uk": "Філіал у місті Маріуполь",
+        "en": "Branch in the city of Mariupol"
+    },
+    "exp-edu__info-text-Academy": {
+        "uk": "Це не відноситься до мого актуального портфоліо, але раніше вивчав програмування у цій школі. Технології, які я вивчив: С++, C#, початковий рівень системного адміністрування.",
+        "en": "This is not part of my current portfolio, but I used to study programming at this school. Technologies I have studied: C++, C#, entry-level system administration."
+    },
+    "exp-edu__info-subtitle-Udemy": {
+        "uk": "Курси з Web-розробки",
+        "en": "Web development courses"
+    },
+    "exp-edu__info-text-Udemy": {
+        "uk": "Курси з HTML, CSS, JavaScript від Івана Петриченко.",
+        "en": "Courses in HTML, CSS, JavaScript by Ivan Petrychenko."
+    },
+    "exp-edu__subtitle-Exp": {
+        "uk": "Досвід",
+        "en": "Experience"
+    },
+    "exp-edu__info-title-OwnProjects": {
+        "uk": "Власні навчальні проєкти",
+        "en": "Own educational projects"
+    },
+    "#portfolio-Watch": {
+        "uk": "подивитись",
+        "en": "take a look"
+    },
+    "exp-edu__info-text-OwnProjects": {
+        "uk": "Написав кілька невеличких проєктів-сторінок, які можуть продемонструвати мої навички. Опис кожного проєкту можете подивитись на моєму",
+        "en": "I wrote a few small project pages that can demonstrate my skills. You can see the description of each project on my"
+    },
+    "uptitle_tools": {
+        "uk": "Навички",
+        "en": ""
+    },
+    "title_tools": {
+        "uk": "Що я використовую у роботі",
+        "en": ""
+    },
+    "tools__text-Html5": {
+        "uk": "Саме він створює каркас вашого сайту, а п'ята версія дозволить мені створювати більш SEO-оптимізовану структуру вашого продукту",
+        "en": ""
+    },
+    "tools__text-Css3": {
+        "uk": "Ця мова стилів дозволяє мені створювати будь-який зовнішній вигляд вашого сайту або програми",
+        "en": ""
+    },
+    "tools__text-Js": {
+        "uk": "Ця мова програмування дозволяє оживити все, що завгодно: слайдери, вікна, підказки, вкладки, отримання даних від сервера та багато іншого",
+        "en": ""
+    },
+    "tools__text-Jquery": {
+        "uk": "Вже трохи застаріла технологія, але все ще використовується у великої кількості проєктів. В мене деякі сторінки використовують jquery.",
+        "en": ""
+    },
+    "uptitle_portfolio": {
+        "uk": "Портфоліо",
+        "en": ""
+    },
+    "title_portfolio": {
+        "uk": "Мої роботи",
+        "en": ""
+    },
+    "uptitle_contacts": {
+        "uk": "Контакти",
+        "en": ""
+    },
+    "title_contacts": {
+        "uk": "Зв'яжіться зі мною",
+        "en": ""
+    },
+    "contacts__descr": {
+        "uk": "Будь яким зручним для вас способом",
+        "en": ""
+    },
+    "contacts__descr-CallYou": {
+        "uk": "Або залиште свої данні, я з вами зв’яжусь",
+        "en": ""
+    },
+    "labelName": {
+        "uk": "Ваше ім'я",
+        "en": ""
+    },
+    "labelEmail": {
+        "uk": "Ваша пошта",
+        "en": ""
+    },
+    "labelMessage": {
+        "uk": "Ваше повідомлення",
+        "en": ""
+    },
+    "button_contacts": {
+        "uk": "Відправити лист",
+        "en": ""
+    },
+    "labelAgree": {
+        "uk": "Я згоден(на) з",
+        "en": ""
+    },
+    "contacts__mail-sending": {
+        "uk": "Відправляю ваше повідомлення...",
+        "en": ""
+    },
+    "contacts__mail-sended": {
+        "uk": "Повідомлення відправлено!",
+        "en": ""
+    }
+}

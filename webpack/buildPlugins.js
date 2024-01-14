@@ -34,7 +34,7 @@ module.exports = function plugins() {
                   plugins: [
                     ["gifsicle", { interlaced: true }],
                     ["mozjpeg", { progressive: true, quality: 90 }],
-                    ["optipng", { optimizationLevel: 5 }],
+                    ["optipng", { optimizationLevel: 5 }],  
                     // Svgo configuration here https://github.com/svg/svgo#configuration
                     [
                       "svgo",

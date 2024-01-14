@@ -1,4 +1,3 @@
-debugger;
 const { merge } = require('webpack-merge'),
       common = require('./webpack.config.common.js'),
       devServer = require('./buildDevServer.js');
