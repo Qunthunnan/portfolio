@@ -1,8 +1,16 @@
 import jQuery from "jquery";
 import validate from 'jquery-validation';
+import {setLocale, LangWidget} from './localeWidget';
 window.$ = window.jQuery = jQuery;
 
+//Localization setting
+setLocale();
 
+//Localization widget create
+const localeWidget = new LangWidget({
+    uk: 'Українська',
+    en: 'English',
+});
 
 // promo menu
 const menu = document.querySelector('.promo__menu-overlay'),

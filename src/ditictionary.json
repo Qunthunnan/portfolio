@@ -113,7 +113,7 @@
     },
     "exp-edu__info-text-OwnProjects": {
         "uk": "Написав кілька невеличких проєктів-сторінок, які можуть продемонструвати мої навички. Опис кожного проєкту можете подивитись на моєму ",
-        "en": "I wrote a few small project pages that can demonstrate my skills. You can see the description of each project on my"
+        "en": "I wrote a few small project pages that can demonstrate my skills. You can see the description of each project on my "
     },
     "uptitle_tools": {
         "uk": "Навички",
@@ -142,6 +142,10 @@
     "tools__text-Tools": {
         "uk": "Ці інструменти дозволять мені ефективніше налаштувати робочий простір та працювати над вашими задачами",
         "en": "These tools will allow me to more efficiently set up my workspace and work on your tasks"
+    },
+    "tools__text-Pug": {
+        "uk": "Препроцесори здатні значно облегшити роботу з кодом. Використовуючи їх, я можу збільшити ефективність розробки",
+        "en": "Preprocessors can greatly facilitate work with the code. By using them, I can increase the efficiency of development"
     },
     "uptitle_portfolio": {
         "uk": "Портфоліо",
@@ -218,5 +222,21 @@
     "messagesPolicy": {
         "uk": "Необхідна ваша згода, щоби залишити повідомлення.",
         "en": "Your consent is required to leave a message."
+    },
+    "title_none-first": {
+        "uk": "От халепа..",
+        "en": "What a mess.."
+    },
+    "title_none": {
+        "uk": "Схоже, цей проєкт поки що не завершено!",
+        "en": "Looks like this project isn't finished yet!"
+    },
+    "uptitle_none": {
+        "uk": "Проте, зараз ви можете подивитись 4 готових проєкти: ",
+        "en": "However, now you can see 4 finished projects: "
+    },
+    "none__back-link": {
+        "uk": "Повернутись назад",
+        "en": "Go back"
     }
 }

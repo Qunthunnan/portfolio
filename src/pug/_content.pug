@@ -142,6 +142,11 @@ section#tools.tools
                         path(fill='#231F20' d='M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z')
                 h4.tools__tool-title Gulp, Git, Webpack, npm
                 .tools__text= ditictionary['tools__text-Tools'][`${lang}`]
+            .tools__tool
+                .tools__tool-img
+                    img(src=require('@/icons/skills/pug.svg') alt='pug')
+                h4.tools__tool-title PUG, SASS/SCSS
+                .tools__text= ditictionary['tools__text-Pug'][`${lang}`]
 section#portfolio.portfolio
     .container
         h3.uptitle.uptitle_portfolio= ditictionary['uptitle_portfolio'][`${lang}`]
@@ -161,10 +166,10 @@ section#portfolio.portfolio
                     img(src=require('@/img/works/uber.jpg') alt='uber')
             a.portfolio__item.portfolio__item-wordpress.portfolio__item-vertical(target='_blank' href='wordpress/')
                 img(src=require('@/img/works/wordpress-vertical.jpg') alt='wordpress')
-            a.portfolio__item.portfolio__item-none(target='_blank' href='none/')
+            a.portfolio__item.portfolio__item-none(target='_blank' href=`${lang}/none/`)
                 picture
                     img(src=require('@/img/works/bread.jpg') alt='bread')
-            a.portfolio__item.portfolio__item-horizontal.portfolio__item-none(target='_blank' href='none/')
+            a.portfolio__item.portfolio__item-horizontal.portfolio__item-none(target='_blank' href=`${lang}/none/`)
                 picture
                     source(type='image/webp' srcset=require('@/img/works/mac.webp') media='(max-width: 576px)')
                     source(media='(min-width: 577px)' srcset=require('@/img/works/mac.jpg'))
@@ -200,6 +205,6 @@ section#contacts.contacts
                     .contacts__policy
                         input(name='policy' type='checkbox')
                         label= ditictionary['labelAgree'][`${lang}`]
-                            a(target='_blank' href='policy/')= ditictionary['policyLink'][`${lang}`]
+                            a(target='_blank' href=`${lang}/policy`)= ditictionary['policyLink'][`${lang}`]
                 .contacts__mail-sending= ditictionary['contacts__mail-sending'][`${lang}`]
                 .contacts__mail-sended= ditictionary['contacts__mail-sended'][`${lang}`]

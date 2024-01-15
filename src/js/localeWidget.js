@@ -1,16 +1,13 @@
 "use strict"
-const lang = localStorage.getItem('lang'),
-    ditictionary = require('@/ditictionary.json');
-if(!lang) {
-    if(navigator.languages.some((item) => item === 'uk' || item === 'uk-UA' || item === 'ru' || item === 'ru-RU')) {
-        lang = 'uk';
-    } else {
-        lang = 'en';
+
+export function setLocale() {
+    const lang = document.documentElement.getAttribute('lang');
+    if(localStorage.getItem('lang') !== lang) {
+        localStorage.setItem('lang', lang);
     }
-    localStorage.setItem('lang', lang);
 }
 
-class LangWidget {
+export class LangWidget {
     constructor(languages) {
         if(Object.keys(languages)) {
             this.languages = languages;
@@ -29,11 +26,21 @@ class LangWidget {
             let language = document.createElement('li');
             language.setAttribute('lang', Object.keys(this.languages)[i])
             language.classList.add('locale_widget__locale');
+            let link = document.createElement('a');
+            link.setAttribute('href', `../${Object.keys(this.languages)[i]}`);
+            link.textContent = Object.values(this.languages)[i];
+            language.append(link);
             ulListLocales.append(language);
         }
         this.element.append(ulListLocales);
-        document.append(this.element);
+        this.closeBtn = document.createElement('button');
+        this.closeBtn.classList.add('locale_widget__close');
+        this.closeBtn.textContent = '✖';
+        this.closeBtn.addEventListener('click', ()=>{
+            this.element.remove();
+        });
+        this.element.append(this.closeBtn);
+
+        document.body.append(this.element);
     }
 }
-
-module.exports = {LangWidget, lang}
