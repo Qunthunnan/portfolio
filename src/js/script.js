@@ -1,6 +1,9 @@
 import jQuery from "jquery";
 import validate from 'jquery-validation';
 import {setLocale, LangWidget} from './localeWidget';
+const ditictionary = require('../ditictionary.json');
+debugger;
+const lang = document.documentElement.getAttribute('lang');
 window.$ = window.jQuery = jQuery;
 
 //Localization setting
@@ -90,15 +93,15 @@ $(form).validate({
     },
     messages: {
         name: {
-            required: "Введіть, будь ласка, своє ім'я",
-            minlength: "Мінімальна довжина імені: {0} символа"
+            required: ditictionary['messagesName'][lang],
+            minlength: ditictionary['messagesNameLength'][lang]
         },
         email: {
-            required: "Введіть, будь ласка, свою електронну скриньку",
-            email: "Перевірте, чи павильно ви написали пошту, повинен бути символ @"
+            required: ditictionary['messagesEmail'][lang],
+            email: ditictionary['messagesEmailCorrect'][lang]
         },
         policy: {
-            required: "Необхідна ваша згода, щоби залишити повідомлення."
+            required: ditictionary['messagesPolicy'][lang]
         }
     }
 });

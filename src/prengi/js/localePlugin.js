@@ -11,5 +11,5 @@ export default function localeRedirect() {
         localStorage.setItem('lang', lang);
     }
     
-    document.location.replace(`/${lang}`);
+    document.location.replace(`/prengi/${lang}`);
 }

@@ -13,7 +13,7 @@ module.exports = {
         'en/index': './src/pug/en.pug',
         'en/none/index': './src/pug/enNone.pug',
         'en/policy/index': './src/pug/enPolicy.pug',
-        'prengi/index': './src/index.pug',
+        'prengi/index': './src/prengi/index.pug',
         'prengi/uk/index': './src/prengi/pug/uk.pug',
         'prengi/uk/empty/index': './src/prengi/pug/ukEmpty.pug',
         'prengi/en/index': './src/prengi/pug/en.pug',

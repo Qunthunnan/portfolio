@@ -152,7 +152,7 @@ section#portfolio.portfolio
         h3.uptitle.uptitle_portfolio= ditictionary['uptitle_portfolio'][`${lang}`]
         h2.title.title_portfolio= ditictionary['title_portfolio'][`${lang}`]
         .portfolio__wrapper
-            a.portfolio__item.portfolio__item-prengi(target='_blank' href='prengi/')
+            a.portfolio__item.portfolio__item-prengi(target='_blank' href=`prengi/${lang}`)
                 img(src=require('@/img/works/prengi.jpg') alt='prengi')
             a.portfolio__item.portfolio__item-pulse(target='_blank' href='pulse/')
                 picture
@@ -205,6 +205,6 @@ section#contacts.contacts
                     .contacts__policy
                         input(name='policy' type='checkbox')
                         label= ditictionary['labelAgree'][`${lang}`]
-                            a(target='_blank' href=`${lang}/policy`)= ditictionary['policyLink'][`${lang}`]
+                            a(target='_blank' href=`/${lang}/policy`)= ditictionary['policyLink'][`${lang}`]
                 .contacts__mail-sending= ditictionary['contacts__mail-sending'][`${lang}`]
                 .contacts__mail-sended= ditictionary['contacts__mail-sended'][`${lang}`]
