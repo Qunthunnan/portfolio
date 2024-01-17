@@ -1,0 +1,266 @@
+header#header
+	.test
+	nav.head_menu_wrap
+		.container
+			ul.menu
+				li.menu_items
+					a.menu_item(href='#main' data-i18n="main") Головна
+				li.menu_items
+					a.menu_item(href='#terms' data-i18n="terms") Зі своїм автомобілем
+				li.menu_items
+					a.menu_item(href='#terms' data-i18n="termsAuto") На автомобілі компанії
+				li.menu_items
+					a.menu_item(href='#terms' data-i18n="termsRules") Вимоги
+				li.menu_items
+					a.menu_item(href='#footer' data-i18n="footer") Контакти
+				li.menu_items
+					a.menu_item(href='#main' data-i18n="mainForm") Залишити заявку
+		.menu_btn
+			span
+			span
+			span
+	.sub_header
+		.container
+			.row
+				.col-lg-4.offset-lg-1.col-sm-4.col-6
+					img.logo(src=require('../img/logo/uber_logoUa.png') alt='uber_logo')
+					.logo_text(data-i18n="logo_text") Офіційний партнер Uber в Україні
+				.mobile_hide.col-lg-2.offset-lg-2.col-sm-3.offset-sm-2.col-0.offset-0
+					.call_text Телефонуйте нам
+					a.tel(href='tel:+380999999999') +380 99 999 99 99
+				.mobile_align.col-sm-3.col-6
+					a.mobile_view(href='tel:+380999999999') +380 99 999 99 99
+					button.order_call замовити дзвінок
+			.phone
+				.phone__window.phone__window_order
+					.phone__window-close
+						// ?xml version="1.0" ?
+						svg#Layer_1(enable-background='new 0 0 32 32' height='32px' version='1.1' viewBox='0 0 32 32' width='32px' xml:space='preserve' xmlns='https://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink')
+							path(d='M18.221,7.206l9.585,9.585c0.879,0.879,0.879,2.317,0,3.195l-0.8,0.801c-0.877,0.878-2.316,0.878-3.194,0  l-7.315-7.315l-7.315,7.315c-0.878,0.878-2.317,0.878-3.194,0l-0.8-0.801c-0.879-0.878-0.879-2.316,0-3.195l9.587-9.585  c0.471-0.472,1.103-0.682,1.723-0.647C17.115,6.524,17.748,6.734,18.221,7.206z' fill='#fff')
+					form.phone__form(action='#')
+						.phone__name
+							label(for='name-input' data-i18n="labelName") Ім'я
+							input#name-input(name='name' type='text')
+						.phone__number
+							label(for='phone-input' data-i18n="labelPhone") Номер телефону
+							input#phone-input(name='phone' type='text' maxlength='20')
+				.phone__window.phone__window_done
+					.phone__window-close
+						// ?xml version="1.0" ?
+						svg#Layer_1(enable-background='new 0 0 32 32' height='32px' version='1.1' viewBox='0 0 32 32' width='32px' xml:space='preserve' xmlns='https://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink')
+							path(d='M18.221,7.206l9.585,9.585c0.879,0.879,0.879,2.317,0,3.195l-0.8,0.801c-0.877,0.878-2.316,0.878-3.194,0  l-7.315-7.315l-7.315,7.315c-0.878,0.878-2.317,0.878-3.194,0l-0.8-0.801c-0.879-0.878-0.879-2.316,0-3.195l9.587-9.585  c0.471-0.472,1.103-0.682,1.723-0.647C17.115,6.524,17.748,6.734,18.221,7.206z' fill='#fff')
+					.phone__window-descr(data-i18n="phone__window-descr") Записали ваш номер, очікуйте незабаром дзвінка!
+section#main.main
+	.container
+		.row
+			.col-lg-10.offset-lg-1.col-12
+				h1.title(data-i18n="title_main") КОМПАНІЯ UBER PARTNERS!
+				h2.title_invite(data-i18n="title_invite") ЗАПРОШУЄМО ВОДІЇВ! НА СВОЄМУ АВТО!
+				.promo_text(data-i18n="promo_text")
+					| Компанія UBER динамічно розвивається. Компанія на ринку займає провідну позицію серед таксомоторних компаній, Компанія абсолютно прозора ви можете контролювати всі процеси у себе в особистому кабінеті. Бонусна система. Крім виконаної роботи на замовлення, компанія нараховує бонуси запічний час.
+					br
+					br
+					span(data-i18n="promo_text2") Ми одні з партнерів та зарекомендували себе як одна з найкращих команд у місті Київ. Водії у нас заробляють від 15 000 – 30 000 на місяць.
+		a.send_resume_btn(target='_blank' href='https://www.uber.com/in/en/s/e/join/' data-i18n="send_resume_btn") ВІДПРАВИТИ ЗАЯВКУ!
+section#reasons.reasons
+	.container
+		.label(data-i18n="labelReasons") переваги
+		h2.title(data-i18n="title_reasons") 8 причин почати працювати з нами
+		.row.reasons_wrap
+			.col-sm-6.col-12
+				.reason_wrap
+					.circle
+						img.reason_icon(src=require('../img/icons/reason_1.png') alt='')
+					.reason_text_wrap
+						.reason_title(data-i18n="reason_title1") Жодної готівки, оплата відбувається автоматично
+						.reason_descr(data-i18n="reason_descr1")
+							| Ціна поїздки оплачується пасажиром з прив'язаної банківської картки, тобто. немає жодних ризиків, пов'язаних з перевезенням готівки як для пасажира, так і для водія, Вам не потрібно шукати дрібні гроші для обміну.
+			.col-sm-6.col-12
+				.reason_wrap
+					.circle
+						img.reason_icon(src=require('../img/icons/reason_2.png') alt='')
+					.reason_text_wrap
+						.reason_title(data-i18n="reason_title2") Комісія 8% + БОНУСИ
+						.reason_descr(data-i18n="reason_descr2")
+							| У нас є мінімальна комісія і ми виплачуємо бонуси за кожну поїздку, деякі наші конкуренти залишають бонуси собі. Ми працюємо чесно та з нами водії заробляють більше!
+			.col-sm-6.col-12
+				.reason_wrap
+					.circle
+						img.reason_icon(src=require('../img/icons/reason_3.png') alt='')
+					.reason_text_wrap
+						.reason_title(data-i18n="reason_title3") Високий дохід із гарантованими виплатами
+						.reason_descr(data-i18n="reason_descr3")
+							| Ми виплачуємо заробітну плату на особисту банківську картку водія! Вам не потрібно оформлювати ТОВ, ФОП, сплачувати податки, подавати декларацію, сплачувати бухгалтерські послуги та ведення банківського рахунку.
+			.col-sm-6.col-12
+				.reason_wrap
+					.circle
+						img.reason_icon(src=require('../img/icons/reason_4.png') alt='')
+					.reason_text_wrap
+						.reason_title(data-i18n="reason_title4") Робота в зручний час, жодних графіків
+						.reason_descr(data-i18n="reason_descr4")
+							| Ви просто натискаєте кнопку вийти на лінію для початку роботи, коли вирішите закінчити натискаєте вийти з лінії. Ви можете підробляти тільки вранці, ввечері, у вихідні чи святкові дні!
+			.col-sm-6.col-12
+				.reason_wrap
+					.circle
+						img.reason_icon(src=require('../img/icons/reason_5.png') alt='')
+					.reason_text_wrap
+						.reason_title(data-i18n="reason_title5") Комфортне, прозоре та просте підключення
+						.reason_descr(data-i18n="reason_descr5")
+							| Ми підключаємо дистанційно та безоплатно, Вам не потрібно приїжджати до нас! Ви надсилаєте нам копії документів, ми реєструємо Вас та надсилаємо дані для підключення, через 1-2 дні Ви можете починати працювати!
+			.col-sm-6.col-12
+				.reason_wrap
+					.circle
+						img.reason_icon(src=require('../img/icons/reason_6.png') alt='')
+					.reason_text_wrap
+						.reason_title(data-i18n="reason_title6") Завжди велика кількість замовлень
+						.reason_descr(data-i18n="reason_descr6")
+							| Додаток показує, де зараз найбільше замовлень і де діють підвищені тарифи. У Вас не буде простою. Наші пасажири завжди приємні та абсолютно неконфліктні люди, яких приємно возити.
+			.col-sm-6.col-12
+				.reason_wrap
+					.circle
+						img.reason_icon(src=require('../img/icons/reason_7.png') alt='')
+					.reason_text_wrap
+						.reason_title(data-i18n="reason_title7") Цілодобова підтримка
+						.reason_descr(data-i18n="reason_descr7")
+							| В Uber діє цілодобова підтримка водіїв електронною поштою. Якщо щось незрозуміло, Ви завжди можете поставити запитання через On-line консультацію.
+			.col-sm-6.col-12
+				.reason_wrap
+					.circle
+						img.reason_icon(src=require('../img/icons/reason_8.png') alt='')
+					.reason_text_wrap
+						.reason_title(data-i18n="reason_title8") Без шашечок та наклейок
+						.reason_descr(data-i18n="reason_descr8")
+							| Вам не потрібно змінювати колір, встановлювати «шашки» на автомобіль та обклеювати його наклейками.
+section#mobile.mobile
+	.container
+		.label(data-i18n="labelMobile") Можливості
+		h2.title(data-i18n="title_mobile") мобільний додаток Uber
+		h3.sub_title(data-i18n="sub_title")
+			| Зробіть замовлення, здійсніть поїздку та сплатіть її вартість, використовуючи свій мобільний телефон
+		.row
+			.col-lg-4.col-sm-6
+				.mobile_item.mobile_item_1
+					.mobile_item_title(data-i18n="mobile_item_title1") оформлення замовлення одним дотиком
+					a.mobile_item_plus(target='_blank' href='https://apps.apple.com/us/app/uber-request-a-ride/id368677368')
+			.col-lg-4.col-sm-6
+				.mobile_item.mobile_item_2
+					.mobile_item_title(data-i18n="mobile_item_title2") надійна подача
+					a.mobile_item_plus(target='_blank' href='https://apps.apple.com/us/app/uber-request-a-ride/id368677368')
+			.col-lg-4.col-sm-6
+				.mobile_item.mobile_item_3
+					.mobile_item_title(data-i18n="mobile_item_title3") прозорі ціни
+					a.mobile_item_plus(target='_blank' href='https://apps.apple.com/us/app/uber-request-a-ride/id368677368')
+			.col-lg-4.col-sm-6
+				.mobile_item.mobile_item_4
+					.mobile_item_title(data-i18n="mobile_item_title4") безготівкова оплата
+					a.mobile_item_plus(target='_blank' href='https://apps.apple.com/us/app/uber-request-a-ride/id368677368')
+			.col-lg-4.col-sm-6
+				.mobile_item.mobile_item_5
+					.mobile_item_title(data-i18n="mobile_item_title5") Зворотний зв'язок
+					a.mobile_item_plus(target='_blank' href='https://apps.apple.com/us/app/uber-request-a-ride/id368677368')
+			.col-lg-4.col-sm-6
+				.mobile_item.mobile_item_6
+					.mobile_item_title(data-i18n="mobile_item_title6")
+						| розділити вартість поїздки
+					a.mobile_item_plus(target='_blank' href='https://apps.apple.com/us/app/uber-request-a-ride/id368677368')
+section#choice.choice
+	.blue_bg
+		.container
+			.label(data-i18n="labelChoice") Можливості
+			.title(data-i18n="title_choice") Вибір - чудова штука!
+			.sub_title(data-i18n="sub_title_choice") Замовте автомобіль, який підходить вам за стилем та бюджетом
+			img.auto(src=require('../img/png_img/autoUa.png') alt='')
+			.mobile_show_text(data-i18n="mobile_show_text")
+				| Машини щодня. Краще, швидше та дешевше, ніж таксі
+	.second_bg
+		.container
+			.second_bg_text(data-i18n="second_bg_text")
+				| Машини щодня. Краще, швидше та дешевше, ніж таксі
+section#terms.terms
+	.container
+		.label(data-i18n="labelTerms") можливості
+		.title(data-i18n="title_terms") умови та вимоги
+		.row
+			.col-sm-6.col-12
+				.term_blue
+					h3.term_title(data-i18n="term_title1") УМОВИ: зі своїм авто:
+					ul.term_list
+						li.term_point(data-i18n="term_point1") Підключаємо до системи UBER під 10%.
+						li.term_point(data-i18n="term_point2") Жодних внесків 0%!
+						li.term_point(data-i18n="term_point3") Можемо підключати віддалено без приїзду до офісу
+						li.term_point(data-i18n="term_point4") ФОП не потрібно
+						li.term_point(data-i18n="term_point5") Замовлення розподіляються без урахування рейтингу найближчим водіям
+						li.term_point(data-i18n="term_point6") Робота тільки за безготівковим розрахунком
+						li.term_point(data-i18n="term_point7") Гроші перераховуємо на карту водію або готівкою в офісі
+					.term_descr(data-i18n="term_descr") У день заробіток складає 7000-12000₴ + бонус 2000₴
+			.col-sm-6.col-12
+				.term_blue
+					h3.term_title(data-i18n="term_title2") УМОВИ: на авто компанії:
+					ul.term_list
+						li.term_point(data-i18n="term_point8") Надаємо авто без застави
+						li.term_point(data-i18n="term_point9") Без щоденних виплат з оренди
+						li.term_point(data-i18n="term_point10") Середа п'ятниця та субота робота на компанію - решту днів ви працюєте на себе
+			.col-sm-6.col-12
+				.term_red
+					h3.term_title(data-i18n="term_title3") ВИМОГИ:
+					ul.term_list
+						li.term_point(data-i18n="term_point11") Наявність автомобіля без реклами
+						li.term_point(data-i18n="term_point12") Автомобіль не повинен бути жовтий та не з жовтими номерами
+						li.term_point(data-i18n="term_point13") Машина не старша 3 років
+						li.term_point(data-i18n="term_point14") Стаж водіння не менше 3 років
+						li.term_point(data-i18n="term_point15") Дивайс на системі андроїд 4.0 і вище (самсунг)
+			.col-sm-6.col-12
+				.term_red
+					h3.term_title(data-i18n="term_title4") ДОКУМЕНТИ:
+					ul.term_list
+						li.term_point(data-i18n="term_point16") Права 2 сторони
+						li.term_point(data-i18n="term_point17") Паспорт лицьова сторона
+						li.term_point(data-i18n="term_point18") Ліцензія (якщо є)
+						li.term_point(data-i18n="term_point19") Номер телефону
+						li.term_point(data-i18n="term_point20") Номер картки для перерахування грошей (вказати у листі)!
+section#world.world
+	.container
+		.label(data-i18n="labelWorld") міста
+		h2.title(data-i18n="title_world") По всьому світу
+		h3.sub_title(data-i18n="sub_title_world") Ми у вашому місті та по всьому світу
+		a.all_cities(target='_blank' href='https://www.uber.com/global/en/cities/' data-i18n="all_cities") переглянути всі міста
+footer#footer
+	.line
+	.wrapper
+		.left_side
+			.socials
+				a.social_link(target='_blank' href='https://www.facebook.com/kirylo.bashkan')
+					span.icon-facebook
+				a.social_link(target='_blank' href='https://twitter.com/')
+					span.icon-twitter
+				a.social_link(target='_blank' href='https://www.linkedin.com/')
+					span.icon-linkedin
+				a.social_link(target='_blank' href='https://www.instagram.com/')
+					span.icon-instagram
+		.center_side
+			nav.menu_upper
+				ul.menu
+					li.menu_item
+						a(href='#header' data-i18n="footer_header") На головну
+					li.menu_item(target='_blank')
+						a(href='https://www.uber.com/global/en/cities/' data-i18n="footer_cities") міста
+					li.menu_item
+						a(href='#reasons' data-i18n="footer_reasons") для водіїв
+			nav.menu_lover
+				ul.menu
+					li.menu_item(target='_blank')
+						a(href='https://t.me/Qunthunnan0' data-i18n="footer_support") центр підтримки
+					li.menu_item(target='_blank')
+						a(href='https://www.uber.com/us/en/careers/' data-i18n="footer_careers") вакансії
+					li.menu_item(target='_blank')
+						a(href='https://t.me/Qunthunnan0' data-i18n="footer_me") розробники
+					li.menu_item(target='_blank')
+						a(href='https://www.uber.com/en-US/blog/' data-i18n="footer_blog") блог
+					li.menu_item(target='_blank')
+						a(href='https://www.uber.com/gb/en/about/' data-i18n="footer_about") про нас
+			a.language(href='#' data-i18n="footer_language") українська
+		.right_side
+			.store_links
+				a.app_store(target='_blank' href='https://apps.apple.com/us/app/uber-request-a-ride/id368677368')
+				a.google_play(target='_blank' href='https://play.google.com/store/apps/details?id=com.ubercab')
+				a.windows_store(target='_blank' href='https://www.microsoft.com/store/productid/9WZDNCRFHXRD?ocid=pdpshare')

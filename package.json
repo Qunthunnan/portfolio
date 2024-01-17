@@ -51,11 +51,13 @@
     "@splidejs/splide": "^4.1.4",
     "animate.css": "^4.1.1",
     "flatpickr": "^4.6.13",
+    "i18next": "^23.7.16",
     "intl-tel-input": "^18.3.4",
     "jquery": "^3.7.1",
     "jquery-validation": "^1.20.0",
     "jquery.maskedinput": "^1.4.1",
     "libphonenumber-js": "^1.10.53",
+    "loc-i18next": "^0.1.6",
     "normalize.css": "^8.0.1",
     "tiny-slider": "^2.9.4",
     "wowjs": "^1.1.3"

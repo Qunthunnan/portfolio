@@ -21,7 +21,9 @@ module.exports = {
         'pulse/index': './src/pulse/index.pug',
         'pulse/uk/index': './src/pulse/pug/uk.pug',
         'pulse/en/index': './src/pulse/pug/en.pug',
-        // 'uber/index': './src/uber/index.pug',
+        'uber/index': './src/uber/index.pug',
+        'uber/uk/index': './src/uber/pug/uk.pug',
+        'uber/en/index': './src/uber/pug/en.pug',
         // 'wordpress/index': './src/wordpress/index.pug',
       },
       output: {
