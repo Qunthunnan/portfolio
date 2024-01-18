@@ -26,11 +26,11 @@ header#header
 					img.logo(src=require('../img/logo/uber_logoUa.png') alt='uber_logo')
 					.logo_text(data-i18n="logo_text") Офіційний партнер Uber в Україні
 				.mobile_hide.col-lg-2.offset-lg-2.col-sm-3.offset-sm-2.col-0.offset-0
-					.call_text Телефонуйте нам
+					.call_text(data-i18n="call_text") Телефонуйте нам
 					a.tel(href='tel:+380999999999') +380 99 999 99 99
 				.mobile_align.col-sm-3.col-6
 					a.mobile_view(href='tel:+380999999999') +380 99 999 99 99
-					button.order_call замовити дзвінок
+					button.order_call(data-i18n="order_call") замовити дзвінок
 			.phone
 				.phone__window.phone__window_order
 					.phone__window-close
@@ -56,8 +56,8 @@ section#main.main
 			.col-lg-10.offset-lg-1.col-12
 				h1.title(data-i18n="title_main") КОМПАНІЯ UBER PARTNERS!
 				h2.title_invite(data-i18n="title_invite") ЗАПРОШУЄМО ВОДІЇВ! НА СВОЄМУ АВТО!
-				.promo_text(data-i18n="promo_text")
-					| Компанія UBER динамічно розвивається. Компанія на ринку займає провідну позицію серед таксомоторних компаній, Компанія абсолютно прозора ви можете контролювати всі процеси у себе в особистому кабінеті. Бонусна система. Крім виконаної роботи на замовлення, компанія нараховує бонуси запічний час.
+				.promo_text
+					span(data-i18n="promo_text") Компанія UBER динамічно розвивається. Компанія на ринку займає провідну позицію серед таксомоторних компаній, Компанія абсолютно прозора ви можете контролювати всі процеси у себе в особистому кабінеті. Бонусна система. Крім виконаної роботи на замовлення, компанія нараховує бонуси запічний час.
 					br
 					br
 					span(data-i18n="promo_text2") Ми одні з партнерів та зарекомендували себе як одна з найкращих команд у місті Київ. Водії у нас заробляють від 15 000 – 30 000 на місяць.
@@ -258,7 +258,10 @@ footer#footer
 						a(href='https://www.uber.com/en-US/blog/' data-i18n="footer_blog") блог
 					li.menu_item(target='_blank')
 						a(href='https://www.uber.com/gb/en/about/' data-i18n="footer_about") про нас
-			a.language(href='#' data-i18n="footer_language") українська
+			if(lang==='en')
+				a.language(href=`/uber/uk` data-i18n="footer_language") українська
+			else
+				a.language(href=`/uber/en` data-i18n="footer_language") українська
 		.right_side
 			.store_links
 				a.app_store(target='_blank' href='https://apps.apple.com/us/app/uber-request-a-ride/id368677368')

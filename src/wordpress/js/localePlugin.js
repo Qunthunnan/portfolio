@@ -11,5 +11,5 @@ export default function localeRedirect() {
         localStorage.setItem('lang', lang);
     }
     
-    document.location.replace(`/uber/${lang}`);
+    document.location.replace(`/wordpress/${lang}`);
 }

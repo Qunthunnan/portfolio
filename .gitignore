@@ -3,10 +3,10 @@
 /node_modules
 
 #backend
-src/mailer
-
-src/wordpress/mailer
-src/pulse/mailer
+src/secrets.php
+src/PHPMailer
+src/wordpress/PHPMailer
+src/pulse/PHPMailer
 users.json
 
 

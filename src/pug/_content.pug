@@ -152,24 +152,24 @@ section#portfolio.portfolio
         h3.uptitle.uptitle_portfolio= ditictionary['uptitle_portfolio'][`${lang}`]
         h2.title.title_portfolio= ditictionary['title_portfolio'][`${lang}`]
         .portfolio__wrapper
-            a.portfolio__item.portfolio__item-prengi(target='_blank' href=`prengi/${lang}`)
+            a.portfolio__item.portfolio__item-prengi(target='_blank' href=`/prengi/${lang}`)
                 img(src=require('@/img/works/prengi.jpg') alt='prengi')
-            a.portfolio__item.portfolio__item-pulse(target='_blank' href='pulse/')
+            a.portfolio__item.portfolio__item-pulse(target='_blank' href=`/pulse/${lang}`)
                 picture
                     source(type='image/webp' srcset=require('@/img/works/pulse.webp') media='(max-width:576px)')
                     source(media='(min-width: 577px)' srcset=require('@/img/works/pulse.jpg'))
                     img(src=require('@/img/works/pulse.jpg') alt='pulse')
-            a.portfolio__item.portfolio__item-uber(target='_blank' href='uber/')
+            a.portfolio__item.portfolio__item-uber(target='_blank' href=`/uber/${lang}`)
                 picture
                     source(type='image/webp' srcset=require('@/img/works/uber.webp') media='(max-width: 576px)')
                     source(media='(min-width: 577px)' srcset=require('@/img/works/uber.jpg'))
                     img(src=require('@/img/works/uber.jpg') alt='uber')
-            a.portfolio__item.portfolio__item-wordpress.portfolio__item-vertical(target='_blank' href='wordpress/')
+            a.portfolio__item.portfolio__item-wordpress.portfolio__item-vertical(target='_blank' href=`/wordpress/${lang}`)
                 img(src=require('@/img/works/wordpress-vertical.jpg') alt='wordpress')
-            a.portfolio__item.portfolio__item-none(target='_blank' href=`${lang}/none/`)
+            a.portfolio__item.portfolio__item-none(target='_blank' href=`/${lang}/none/`)
                 picture
                     img(src=require('@/img/works/bread.jpg') alt='bread')
-            a.portfolio__item.portfolio__item-horizontal.portfolio__item-none(target='_blank' href=`${lang}/none/`)
+            a.portfolio__item.portfolio__item-horizontal.portfolio__item-none(target='_blank' href=`/${lang}/none/`)
                 picture
                     source(type='image/webp' srcset=require('@/img/works/mac.webp') media='(max-width: 576px)')
                     source(media='(min-width: 577px)' srcset=require('@/img/works/mac.jpg'))

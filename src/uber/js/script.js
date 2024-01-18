@@ -2,11 +2,10 @@ import intlTelInput from 'intl-tel-input';
 import parsePhoneNumber from 'libphonenumber-js';
 import i18next from 'i18next';
 import locI18next from "loc-i18next";
-import {setLocale} from './localeWidget';
+import {setLocale, LangWidget} from './localeWidget';
 import jQuery from 'jquery';
 window.$ = window.jQuery = jQuery;
 
-debugger;
 const lang = setLocale();
 
 
@@ -102,15 +101,15 @@ function inputValidation(input) {
                     deleteError(input);
                     return true;
                 } else {
-                    showErrors(input, 'Спеціальні символи, які можна використати:\n ( ) - _');
+                    showErrors(input, i18next.t('messages_name'));
                     return false;
                 }
             } else {
-                showErrors(input, 'Максимальна довжина імені: 255');
+                showErrors(input, i18next.t('messages_name_length_max'));
                 return false;
             }
         } else {
-            showErrors(input, 'Мінімальна довжина імені: 2');
+            showErrors(input, i18next.t('messages_name_length_min'));
             return false;
         }
     }
@@ -121,11 +120,11 @@ function inputValidation(input) {
                 deleteError(input);
                 return true;
             } else {
-                showErrors(input, 'Перевірте, чи правильно написали номер телефону');
+                showErrors(input, i18next.t('messages_phone'));
                 return false;
             }
         } catch (error) {
-            showErrors(input, 'Перевірте, чи правильно написали номер телефону');
+            showErrors(input, i18next.t('messages_phone'));
             return false;
             }
         }
@@ -190,7 +189,10 @@ i18next.init(options, (err, t)=>{
     localize('body', options);
 });
 
-console.log(i18next.t('logo_text'));
+const localeWidget = new LangWidget({
+    uk: 'Українська',
+    en: 'English',
+});
   
 
 let iti = intlTelInput(phoneInput, {

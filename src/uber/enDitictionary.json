@@ -87,5 +87,9 @@
     "footer_me": "developers",
     "footer_blog": "blog",
     "footer_about": "about us",
-    "footer_language": "Ukrainian"
+    "footer_language": "Українською",
+    "messages_name": "Special characters that can be used:\n ( ) - _",
+     "messages_name_length_max": "Max name length: 255",
+     "messages_name_length_min": "Minimum name length: 2",
+     "messages_phone": "Check if the phone number is correct"
 }

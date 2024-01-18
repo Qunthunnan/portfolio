@@ -28,6 +28,14 @@ module.exports = function loaders () {
           {
             test: /\.(ico|webmanifest)/,
             type: 'asset/resource',
-          }
+          },
+          {
+            test: /\.(php)/,
+            type: 'asset/resource',
+            generator: {
+              filename: '[path][name][ext]'
+            }
+          },
+
     ]
 }

@@ -28,7 +28,7 @@ export class LangWidget {
             language.setAttribute('lang', Object.keys(this.languages)[i])
             language.classList.add('locale_widget__locale');
             let link = document.createElement('a');
-            link.setAttribute('href', `/uber/${Object.keys(this.languages)[i]}`);
+            link.setAttribute('href', `/wordpress/${Object.keys(this.languages)[i]}`);
             link.textContent = Object.values(this.languages)[i];
             language.append(link);
             ulListLocales.append(language);

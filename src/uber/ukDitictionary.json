@@ -87,5 +87,9 @@
     "footer_me": "розробники",
     "footer_blog": "блог",
     "footer_about": "про нас",
-    "footer_language": "українська"
+    "footer_language": "English",
+    "messages_name": "Спеціальні символи, які можна використати:\n ( ) - _",
+    "messages_name_length_max": "Максимальна довжина імені: 255",
+    "messages_name_length_min": "Мінімальна довжина імені: 2",
+    "messages_phone": "Перевірте, чи правильно написали номер телефону"
 }
