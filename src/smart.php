@@ -9,7 +9,8 @@ require 'PHPMailer/PHPMailer/Exception.php';
 require 'PHPMailer/PHPMailer/PHPMailer.php';
 require 'PHPMailer/PHPMailer/SMTP.php';
 
-include 'secrets.php'
+include 'secrets.php';
+echo $secrets->mails[0];
 
 // Функція для отримання IP-адреси користувача
 function getUserIP() {
@@ -57,8 +58,10 @@ function getRequestsCountByIp($ip, $usersData) {
     return $count;
 }
 
-function sendMail($messageBody, $email) {
+function sendMail($messageBody, $email, $secrets) {
     try {
+        echo $secrets->mails[1];
+        echo '\n' . $secrets->passwords[1] . '';
         $mail = new PHPMailer(true);
         $mail->CharSet = 'UTF-8';
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
@@ -66,7 +69,7 @@ function sendMail($messageBody, $email) {
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = $secrets->mails[1];
-        $mail->Password   = $secrets->password[1];
+        $mail->Password   = $secrets->passwords[1];
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
@@ -95,7 +98,7 @@ if(isset($name, $email, $message)) {
         "ip" => getUserIP()
     ];
 
-    $file = '../../users.json';
+    $file = '../users.json';
     $usersData = [];
     if (file_exists($file)) {
         $data = file_get_contents($file);
@@ -118,7 +121,7 @@ if(isset($name, $email, $message)) {
     <h3>Рекомендую відключити поки mailer до з\'ясування обставин.</h3>';
     if($requestsLastDay == 30 || $requestsLastDay == 50 || $requestsLastDay == 70 || $requestsLastDay == 88) {
         echo 'Warning, spam possible!' . $requestsLastDay . ' was sended for last 24 hours';
-        sendMail($warningMailBody, 'bredtv6@gmail.com');
+        sendMail($warningMailBody, $secrets->mails[1], $secrets);
     }
 
     if($requestsLastDay >= 90) {
@@ -134,7 +137,7 @@ if(isset($name, $email, $message)) {
             } else {
                 if($requestsByIp == 5) {
                     echo 'Block ip for security reasons.';
-                    sendMail($blockIpMailBody, $userData['email']);
+                    sendMail($blockIpMailBody, $userData['email'], $secrets);
                     $usersData[] = [
                         'ip' => $userData["ip"],
                         'email' => $userData["email"],
@@ -143,7 +146,7 @@ if(isset($name, $email, $message)) {
                     ];
                     saveUsersData($usersData);
                 } else {
-                    sendMail($portfolioMessageBody, 'qunthunnan@gmail.com');
+                    sendMail($portfolioMessageBody, $secrets->mails[0], $secrets);
                     $usersData[] = [
                         'ip' => $userData["ip"],
                         'email' => $userData["email"],
