@@ -2,7 +2,6 @@ import jQuery from "jquery";
 import validate from 'jquery-validation';
 import {setLocale, LangWidget} from './localeWidget';
 const ditictionary = require('../ditictionary.json');
-debugger;
 const lang = document.documentElement.getAttribute('lang');
 window.$ = window.jQuery = jQuery;
 
@@ -16,6 +15,7 @@ const localeWidget = new LangWidget({
 });
 
 // promo menu
+
 const menu = document.querySelector('.promo__menu-overlay'),
 menuBlock = document.querySelector('.promo__menu-block'),
 menuItem = document.querySelectorAll('.promo__menu-item'),
@@ -110,12 +110,15 @@ return validation.form();
 //send mail
 $(".contacts__form").submit(function (e) {
     e.preventDefault();
-    if(validateForm(this) == true) {
+    if(validateForm(this) === true) {
+        debugger;
+        let userData = new FormData(e.target);
+        userData.append('lang', lang);
         $('.contacts__mail-sending').fadeIn();
     $.ajax({
         type: "POST",
         url: "/smart.php",
-        data: $(this).serialize()
+        data: $.param(Object.fromEntries(userData.entries())),
     }).done(function () {
         $(this).find("input").val("");
         $("form").trigger("reset");

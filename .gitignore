@@ -4,6 +4,8 @@
 
 #backend
 src/secrets.php
+src/wordpress/secrets.php
+src/pulse/secrets.php
 src/PHPMailer
 src/wordpress/PHPMailer
 src/pulse/PHPMailer

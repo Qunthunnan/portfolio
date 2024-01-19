@@ -23,7 +23,7 @@ function getUserIP() {
 
 // Збереження даних в файл users.json
 function saveUsersData($data) {
-    $file = '../../users.json';
+    $file = 'users/users.json';
     file_put_contents($file, json_encode($data, JSON_PRETTY_PRINT));
 }
 
@@ -60,8 +60,6 @@ function getRequestsCountByIp($ip, $usersData) {
 
 function sendMail($messageBody, $email, $secrets) {
     try {
-        echo $secrets->mails[1];
-        echo '\n' . $secrets->passwords[1] . '';
         $mail = new PHPMailer(true);
         $mail->CharSet = 'UTF-8';
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
@@ -89,6 +87,7 @@ function sendMail($messageBody, $email, $secrets) {
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
+$lang = $_POST['lang'];
 
 if(isset($name, $email, $message)) {
     $userData = [
@@ -98,27 +97,42 @@ if(isset($name, $email, $message)) {
         "ip" => getUserIP()
     ];
 
-    $file = '../users.json';
+    $file = 'users.json';
     $usersData = [];
     if (file_exists($file)) {
         $data = file_get_contents($file);
         $usersData = json_decode($data, true);
     }
 
-    $portfolioMessageBody = '<h1>Хей, нове повідомлення з портфоліо!</h1>
-    <h2>' . $userData['name'] . ' пише:</h2>
-    <p>' . $userData['message'] . '</p>
-    <p>Пошта для зв\'язку: ' . $userData['email'] . ', успіхів!😉</p>';
+    $portfolioMessageBody = [
+        'en' => '<h1>Hey, new message from the portfolio!</h1>
+        <h2>'. $userData['name'] . ' writes:</h2>
+        <p>'. $userData['message'] . '</p>
+        <p>Mail for communication: ' . $userData['email'] . ', good luck!😉</p>'
+        ,
+        'uk' => '<h1>Хей, нове повідомлення з портфоліо!</h1>
+        <h2>' . $userData['name'] . ' пише:</h2>
+        <p>' . $userData['message'] . '</p>
+        <p>Пошта для зв\'язку: ' . $userData['email'] . ', успіхів!😉</p>'
+    ];
 
-    $blockIpMailBody = '<h1>Схоже, повідомлення вже було відправлено!</h1>
-    <p>'. $userData["name"] .', скоріше за все, я вже отримав ваше повідомлення.</p>
-    <p>Якщо, виникла якась помилка, можете зв\'язатись зі мною зручним для вас способом:</p>
-    <p><a href="mailto:qunthunnan@gmail.com">qunthunnan@gmail.com</a>, <a href="https://t.me/Qunthunnan0">Telegram</a>, <a href="https://www.facebook.com/kirylo.bashkan">Facebook</a></p>';
+    $blockIpMailBody = [
+        'en' => '<h1>Looks like the message has already been sent!</h1>
+        <p>'. $userData["name"] .', I probably already received your message.</p>
+        <p>If there is an error, you can contact me in a way convenient for you:</p>
+        <p><a href="mailto:qunthunnan@gmail.com">qunthunnan@gmail.com</a>, <a href="https://t.me/Qunthunnan0">Telegram</a>, < a href="https://www.facebook.com/kirylo.bashkan">Facebook</a></p>'
+        ,
+        'uk' => '<h1>Схоже, повідомлення вже було відправлено!</h1>
+        <p>'. $userData["name"] .', скоріше за все, я вже отримав ваше повідомлення.</p>
+        <p>Якщо, виникла якась помилка, можете зв\'язатись зі мною зручним для вас способом:</p>
+        <p><a href="mailto:qunthunnan@gmail.com">qunthunnan@gmail.com</a>, <a href="https://t.me/Qunthunnan0">Telegram</a>, <a href="https://www.facebook.com/kirylo.bashkan">Facebook</a></p>'
+    ];
 
     $requestsLastDay = getRequestsCountLastDay($usersData);
     $warningMailBody = '<h1 style="color: red">!!УВАГА, НА СЕРВЕРІ СКОРІШЕ ЗА ВСЕ ВИЯВЛЕНО СПАМ!!</h1>
     <h2>Кількість відправлених повідомлень за останні 24 години:' . $requestsLastDay . '</h2>
     <h3>Рекомендую відключити поки mailer до з\'ясування обставин.</h3>';
+    
     if($requestsLastDay == 30 || $requestsLastDay == 50 || $requestsLastDay == 70 || $requestsLastDay == 88) {
         echo 'Warning, spam possible!' . $requestsLastDay . ' was sended for last 24 hours';
         sendMail($warningMailBody, $secrets->mails[1], $secrets);
@@ -137,7 +151,7 @@ if(isset($name, $email, $message)) {
             } else {
                 if($requestsByIp == 5) {
                     echo 'Block ip for security reasons.';
-                    sendMail($blockIpMailBody, $userData['email'], $secrets);
+                    sendMail($blockIpMailBody[$lang], $userData['email'], $secrets);
                     $usersData[] = [
                         'ip' => $userData["ip"],
                         'email' => $userData["email"],
@@ -146,7 +160,7 @@ if(isset($name, $email, $message)) {
                     ];
                     saveUsersData($usersData);
                 } else {
-                    sendMail($portfolioMessageBody, $secrets->mails[0], $secrets);
+                    sendMail($portfolioMessageBody[$lang], $secrets->mails[0], $secrets);
                     $usersData[] = [
                         'ip' => $userData["ip"],
                         'email' => $userData["email"],
